@@ -14,3 +14,9 @@ public protocol Routable {
     var absoluteUrl: URL { get }
     var headers: [String: String] { get }
 }
+
+extension Routable {
+    var absoluteUrl: URL {
+        baseUrl.appendingPathComponent(path)
+    }
+}
