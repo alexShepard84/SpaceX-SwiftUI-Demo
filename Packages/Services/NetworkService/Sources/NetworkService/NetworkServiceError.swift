@@ -1,5 +1,5 @@
 //
-//  HTTPError.swift
+//  NetworkServiceError.swift
 //
 //
 //  Created by Alex Schäfer on 21.01.24.
