@@ -32,6 +32,9 @@ SwiftShowcase includes:
 ## Architecture
 The application uses a modular approach with Swift Packages, promoting code reusability and maintainability.
 
+## Contributions
+Feedback, suggestions, and contributions are welcome. Please use GitHub issues and pull requests.
+
 ## Getting Started
 Clone the repository and open the project in Xcode to begin:
 
@@ -39,8 +42,47 @@ Clone the repository and open the project in Xcode to begin:
 git clone https://github.com/alexShepard84/SwiftShowcase.git
 ```
 
-## Contributions
-Feedback, suggestions, and contributions are welcome. Please use GitHub issues and pull requests.
+## Project Setup
+
+This section guides you through the initial setup process for the SwiftShowcase project.
+
+### Ruby Dependencies and Bundler
+
+This project uses [Bundler](https://bundler.io/) to manage Ruby dependencies, including [CocoaPods](https://cocoapods.org/) and [Fastlane](https://fastlane.tools/).
+
+#### Prerequisites
+Ensure you have Ruby installed on your system. The required Ruby version is >= 2.6.3 and <= 3.2.2. You can check your Ruby version with `ruby -v`.
+
+If Bundler is not already installed, install it using:
+
+```bash
+gem install bundler
+```
+
+#### Installing Dependencies
+To install all required Ruby gems, run the following command in the project directory:
+
+```bash
+bundle install
+```
+
+This will install the gems defined in the `Gemfile`.
+
+#### Using `bundle exec`
+To ensure you are using the specific gem versions defined for this project, you should prefix commands with `bundle exec`. For example:
+
+- To start CocoaPods, use:
+
+```bash
+bundle exec pod install
+```
+- To run Fastlane lanes, use:
+
+```bash
+bundle exec fastlane [lane_name]
+```
+
+Using `bundle exec` ensures that you are using the correct versions of the gems set for this project and avoids conflicts with other gem versions that may be installed globally on your system.
 
 ## Author
 Alex Schäfer (a.schaefer@app-concept.de)
