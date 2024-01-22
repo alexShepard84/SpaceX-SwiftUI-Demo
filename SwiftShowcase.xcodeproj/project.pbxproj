@@ -38,6 +38,7 @@
 		2207781D2B5D1F75006411E8 /* CoreServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreServices; sourceTree = "<group>"; };
 		2207781E2B5D1FA6006411E8 /* PokemonApiREST */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PokemonApiREST; sourceTree = "<group>"; };
 		2207781F2B5D1FC3006411E8 /* PokemonApiDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PokemonApiDomain; sourceTree = "<group>"; };
+		220778202B5D21BB006411E8 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkService; sourceTree = "<group>"; };
 		22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseApp.swift; sourceTree = "<group>"; };
 		22AEB8A62B5A8850008D85F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		2207781A2B5D1F34006411E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				220778202B5D21BB006411E8 /* NetworkService */,
 				2207781D2B5D1F75006411E8 /* CoreServices */,
 			);
 			path = Services;
