@@ -19,6 +19,8 @@
 		22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63A2B5FB88500C9389C /* NetworkService */; };
 		22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63C2B5FB88800C9389C /* SpaceXDomain */; };
 		22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */; };
+		22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6422B5FBEF500C9389C /* RocketsListView.swift */; };
+		22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		22AEB8BD2B5A8851008D85F7 /* SwiftShowcaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftShowcaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITests.swift; sourceTree = "<group>"; };
 		22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22C2C6422B5FBEF500C9389C /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
+		22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 		22AEB8A32B5A8850008D85F7 /* SwiftShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				22C2C6402B5FBECE00C9389C /* Scenes */,
 				22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */,
 				22AEB8A62B5A8850008D85F7 /* ContentView.swift */,
 				22AEB8A82B5A8850008D85F7 /* Item.swift */,
@@ -184,6 +189,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22C2C6402B5FBECE00C9389C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C6412B5FBEDE00C9389C /* Rockets */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		22C2C6412B5FBEDE00C9389C /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C6422B5FBEF500C9389C /* RocketsListView.swift */,
+				22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */,
+			);
+			path = Rockets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,7 +349,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AEB8A72B5A8850008D85F7 /* ContentView.swift in Sources */,
+				22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */,
 				22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */,
+				22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */,
 				22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
