@@ -9,6 +9,7 @@ import Combine
 import Foundation
 import SpaceXDomain
 
+@MainActor
 final class RocketsListViewModel: ObservableObject {
     enum State: Equatable {
         case idle
@@ -49,6 +50,7 @@ private extension RocketsListViewModel {
             .flatMap { [weak self] _ -> AnyPublisher<[Rocket], FetchRocketsUseCaseError> in
                 self?.fetchRocketsUseCase.execute() ?? Empty().eraseToAnyPublisher()
             }
+            .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] completion in
                     if case .failure(let error) = completion {

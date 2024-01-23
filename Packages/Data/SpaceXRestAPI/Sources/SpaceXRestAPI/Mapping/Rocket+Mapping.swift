@@ -10,13 +10,17 @@ import SpaceXDomain
 
 extension RocketDTO {
     func toDomain() -> Rocket {
-        .init(
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let firstFlightDate = dateFormatter.date(from: firstFlight) ?? Date()
+
+        return Rocket(
             id: id,
             name: name,
             country: country,
             description: description,
             images: flickrImages,
-            firstFlight: firstFlight,
+            firstFlight: firstFlightDate,
             active: active
         )
     }

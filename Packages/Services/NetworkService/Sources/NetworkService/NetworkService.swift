@@ -34,12 +34,27 @@ public final class NetworkService: NetworkServiceProtocol {
 // MARK: - Public API
 public extension NetworkService {
     func request<T>(_ route: Routable) -> AnyPublisher<T, Error> where T : Decodable {
+        // TODO: Implement Logger / Improve Error Handling
+
         guard let request = buildRequest(for: route) else {
             return Fail(error: NetworkServiceError.invalidURL).eraseToAnyPublisher()
         }
 
         return session.dataTaskPublisher(for: request)
             .subscribe(on: DispatchQueue.global(qos: .background))
+            .handleEvents(receiveOutput: { data, response in
+                // Loggen der Antwort und des Statuscodes
+                if let httpResponse = response as? HTTPURLResponse {
+                    print("Response Status Code: \(httpResponse.statusCode)")
+                    print("Response Headers: \(httpResponse.allHeaderFields)")
+                }
+                print("Response Data: \(String(data: data, encoding: .utf8) ?? "unable to decode data")")
+            }, receiveCompletion: { completion in
+                // Loggen von Fehlern
+                if case .failure(let error) = completion {
+                    print("Network request failed: \(error)")
+                }
+            })
             .tryMap { data, response -> Data in
                 guard let httpResponse = response as? HTTPURLResponse,
                       (200...299).contains(httpResponse.statusCode) else {
@@ -48,6 +63,14 @@ public extension NetworkService {
                 return data
             }
             .decode(type: T.self, decoder: JSONDecoder())
+            .handleEvents(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("Decoding successful")
+                case .failure(let error):
+                    print("Decoding failed: \(error)")
+                }
+            })
             .eraseToAnyPublisher()
     }
 }

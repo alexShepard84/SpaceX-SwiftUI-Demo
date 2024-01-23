@@ -20,7 +20,7 @@ struct RocketDTO: Codable {
     let stages, boosters: Int
     let costPerLaunch: Int
     let successRatePct: Int
-    let firstFlight: Date
+    let firstFlight: String
     let country, company: String
     let wikipedia: URL
     let description: String
@@ -50,7 +50,7 @@ struct Dimension: Codable {
 struct FirstStage: Codable {
     let thrustSeaLevel, thrustVacuum: Thrust
     let reusable: Bool
-    let engines, fuelAmountTons: Int
+    let engines, fuelAmountTons: Double
     let burnTimeSec: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -66,7 +66,7 @@ struct SecondStage: Codable {
     let thrust: Thrust
     let payloads: Payloads
     let reusable: Bool
-    let engines, fuelAmountTons: Int
+    let engines, fuelAmountTons: Double
     let burnTimeSec: Int?
 
     enum CodingKeys: String, CodingKey {
@@ -98,8 +98,9 @@ struct Engines: Codable {
     let isp: ISP
     let thrustSeaLevel, thrustVacuum: Thrust
     let number: Int
-    let type, version, layout: String
-    let engineLossMax: Int
+    let type, version: String
+    let layout: String? // Optional, falls es null sein kann
+    let engineLossMax: Int?
     let propellant1, propellant2: String
     let thrustToWeight: Double
 
