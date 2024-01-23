@@ -34,7 +34,9 @@ public final class NetworkService: NetworkServiceProtocol {
 // MARK: - Public API
 public extension NetworkService {
     func request<T>(_ route: Routable) -> AnyPublisher<T, Error> where T : Decodable {
-        let request = buildRequest(for: route)
+        guard let request = buildRequest(for: route) else {
+            return Fail(error: NetworkServiceError.invalidURL).eraseToAnyPublisher()
+        }
 
         return session.dataTaskPublisher(for: request)
             .subscribe(on: DispatchQueue.global(qos: .background))
@@ -53,8 +55,12 @@ public extension NetworkService {
 // MARK: - Privates
 private extension NetworkService {
     /// Builds a `URLRequest` from a given `Routable`.
-    func buildRequest(for route: Routable) -> URLRequest {
-        var urlRequest = URLRequest(url: route.absoluteUrl)
+    func buildRequest(for route: Routable) -> URLRequest? {
+        guard let url = route.absoluteUrl else {
+            return nil
+        }
+
+        var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = route.httpMethod
 
         for header in route.headers {

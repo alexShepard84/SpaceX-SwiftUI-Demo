@@ -1,0 +1,151 @@
+analyzer_rules:
+  - unused_declaration
+  - unused_import
+  - typesafe_array_init
+
+opt_in_rules:
+  - array_init
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - computed_accessors_order
+  - comment_spacing
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+  - discouraged_object_literal
+  - discouraged_none_name
+  - duplicated_key_in_dictionary_literal
+  - empty_collection_literal
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - enum_case_associated_values_count
+  - explicit_init
+  - extension_access_modifier
+  - fallthrough
+  - fatal_error_message
+  - file_header
+  - file_name
+  - first_where
+  - flatmap_over_map_reduce
+  - identical_operands
+  - joined_default_parameter
+  - last_where
+  - legacy_multiple
+  - legacy_random
+  - literal_expression_end_indentation
+  - lower_acl_than_parent
+  - modifier_order
+  - nimble_operator
+  #- nslocalizedstring_key
+  - number_separator
+  #- object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - prefer_self_type_over_type_of_self
+  #- private_action
+  #- private_outlet
+  #- prohibited_interface_builder
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_pending_test
+  - force_unwrapping
+  - reduce_into
+  - redundant_optional_initialization
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - static_operator
+  #- strong_iboutlet
+  - test_case_accessibility
+  - toggle_bool
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - unowned_variable_capture
+  - untyped_error_in_catch
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - weak_delegate
+  - xct_specific_matcher
+  - yoda_condition
+
+disabled_rules:
+- attributes
+- blanket_disable_command
+- inclusive_language
+- nesting
+- todo
+
+type_name:
+  min_length: 2
+  max_length: 50
+  allowed_symbols: ["_"]
+  excluded:
+    - id
+
+identifier_name:
+    min_length: 2
+    max_length: 50
+    allowed_symbols: ["_"]
+    excluded:
+      - id
+
+line_length:
+    warning: 150
+    error: 151
+    ignores_urls: true
+    ignores_comments: true
+    ignores_interpolated_strings: true
+    ignores_function_declarations: true
+custom_rules:
+  hardcoded_text:
+    included: ".*\\.swift"
+    #excluded: ".*Test\\.swift"
+    name: "Hardcoded Text"
+    regex: "\\.text = \"[a-zA-Z0-9\\s]+\""
+    message: "Hard-coded texts should be avoided"
+    severity: warning
+  unsafe_continuation:
+    included: ".*\\.swift"
+    name: "unsafe_continuation"
+    regex: "withUnsafe(Throwing)?Continuation"
+    message: "Please consider using the checked(Throwing)Continuation instead, otherwise add a comment for the reason you need/want to use an unsafe(Throwing)Continuation for documentation purposes."
+    severity: warning
+  use_of_system_background_color:
+    included: ".*\\.swift"
+    #excluded: ".*Test\\.swift"
+    name: "Use of UIColor.systemBackground"
+    regex: "\\.systemBackground"
+    message: "Use of UIColor.systemBackground should be avoided, as it leads to an undesired result when used in multitasking. Instead use BackgroundView or use custom appearance with view.backgroundColor = .background."
+    severity: warning
+  nimble_matching_format:
+    included: ".*\\.swift"
+    name: "Nimble Matching Format"
+    regex: "expect\\([a-zA-Z .]+[=!<>]= *.+\\)"
+    message: "Expectation expression in not allowed to contain comparison operators as parameters. Use expect(foo) == 3 not expect(foo == 3)."
+    severity: error
+
+  potential_retain_cycle_assign:
+    included: ".*\\.swift"
+    name: "Potential retain cycle by using \".assign(to:)\""
+    regex: "\\.assign\\(to: [^,]+, on: [^)]+\\)"
+    message: "Using the .assign(to:)-function often results in retain cycles. Check whether the .weakAssign(to:)-function can be used instead. If not deactivate the rule for the affected code."
+    severity: warning
+
+
+  potential_retain_cycle_map:
+    included: ".*\\.swift"
+    name: "Potential retain cycle by using \".map {\" without\"[weak self]\""
+    regex: "\\.map\\s*\\{(?![^\\}]*\\[weak self\\])[^\\}]*self\\.[^\\}]*\\}"
+    message: "Using the \".map {\" closure without \"[weak self]\" but using strong self inside often results in retain cycles. Check whether its possible to use \"[weak self]\" - if not deactivate the rule for the affected code."
+    severity: warning
+
+    
+

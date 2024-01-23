@@ -5,8 +5,8 @@
 //  Created by Alex Schäfer on 19.01.24.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct SwiftShowcaseApp: App {

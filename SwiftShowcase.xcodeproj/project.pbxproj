@@ -15,6 +15,10 @@
 		22AEB8B82B5A8851008D85F7 /* SwiftShowcaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8B72B5A8851008D85F7 /* SwiftShowcaseTests.swift */; };
 		22AEB8C22B5A8851008D85F7 /* SwiftShowcaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */; };
 		22AEB8C42B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */; };
+		22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C6382B5FB88100C9389C /* CoreServices */; };
+		22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63A2B5FB88500C9389C /* NetworkService */; };
+		22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63C2B5FB88800C9389C /* SpaceXDomain */; };
+		22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */,
+				22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */,
+				22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */,
+				22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +128,7 @@
 				22AEB8B62B5A8851008D85F7 /* SwiftShowcaseTests */,
 				22AEB8C02B5A8851008D85F7 /* SwiftShowcaseUITests */,
 				22AEB8A22B5A8850008D85F7 /* Products */,
+				22C2C6372B5FB88100C9389C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +179,13 @@
 			path = SwiftShowcaseUITests;
 			sourceTree = "<group>";
 		};
+		22C2C6372B5FB88100C9389C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +203,12 @@
 				220778182B5D1AB7006411E8 /* PBXTargetDependency */,
 			);
 			name = SwiftShowcase;
+			packageProductDependencies = (
+				22C2C6382B5FB88100C9389C /* CoreServices */,
+				22C2C63A2B5FB88500C9389C /* NetworkService */,
+				22C2C63C2B5FB88800C9389C /* SpaceXDomain */,
+				22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */,
+			);
 			productName = SwiftShowcase;
 			productReference = 22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */;
 			productType = "com.apple.product-type.application";
@@ -659,6 +681,22 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 220778162B5D1A8F006411E8 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		22C2C6382B5FB88100C9389C /* CoreServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreServices;
+		};
+		22C2C63A2B5FB88500C9389C /* NetworkService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkService;
+		};
+		22C2C63C2B5FB88800C9389C /* SpaceXDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpaceXDomain;
+		};
+		22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpaceXRestAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

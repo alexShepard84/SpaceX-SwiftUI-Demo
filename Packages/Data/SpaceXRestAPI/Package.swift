@@ -12,11 +12,18 @@ let package = Package(
             name: "SpaceXRestAPI",
             targets: ["SpaceXRestAPI"]),
     ],
+    dependencies: [
+        .package(name: "SpaceXDomain", path: "../Domain/SpaceXDomain"),
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SpaceXRestAPI"),
+            name: "SpaceXRestAPI",
+            dependencies: [
+                "SpaceXDomain"
+            ]
+        ),
         .testTarget(
             name: "SpaceXRestAPITests",
             dependencies: ["SpaceXRestAPI"]),
