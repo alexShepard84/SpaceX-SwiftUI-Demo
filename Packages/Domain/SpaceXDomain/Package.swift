@@ -4,21 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "PokemonApiDomain",
+    name: "SpaceXDomain",
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "PokemonApiDomain",
-            targets: ["PokemonApiDomain"]),
+            name: "SpaceXDomain",
+            targets: ["SpaceXDomain"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "PokemonApiDomain"),
+            name: "SpaceXDomain"),
         .testTarget(
-            name: "PokemonApiDomainTests",
-            dependencies: ["PokemonApiDomain"]),
+            name: "SpaceXDomainTests",
+            dependencies: ["SpaceXDomain"]),
     ]
 )
