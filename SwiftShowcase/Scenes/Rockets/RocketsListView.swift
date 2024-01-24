@@ -54,6 +54,8 @@ private extension RocketsListView {
     }
 }
 
-//#Preview {
-//    RocketsListView()
-//}
+#Preview {
+    let diContainer = PreviewDIContainer()
+    let viewModel = RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase)
+    return RocketsListView(viewModel: viewModel)
+}

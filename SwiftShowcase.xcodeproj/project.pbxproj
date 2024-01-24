@@ -22,6 +22,8 @@
 		22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6422B5FBEF500C9389C /* RocketsListView.swift */; };
 		22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */; };
 		22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6472B5FC82400C9389C /* DIContainer.swift */; };
+		22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */; };
+		22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		22C2C6422B5FBEF500C9389C /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
 		22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
 		22C2C6472B5FC82400C9389C /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDIContainer.swift; sourceTree = "<group>"; };
+		22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,9 +218,35 @@
 		22C2C6462B5FC81600C9389C /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				22C2C6472B5FC82400C9389C /* DIContainer.swift */,
+				22C2C64C2B60FAE200C9389C /* DIContainer */,
+				22C2C64B2B60FA6A00C9389C /* PreviewSupport */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		22C2C64B2B60FA6A00C9389C /* PreviewSupport */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C64D2B60FAF500C9389C /* Repositories */,
+			);
+			path = PreviewSupport;
+			sourceTree = "<group>";
+		};
+		22C2C64C2B60FAE200C9389C /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C6472B5FC82400C9389C /* DIContainer.swift */,
+				22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		22C2C64D2B60FAF500C9389C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,7 +390,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AEB8A72B5A8850008D85F7 /* ContentView.swift in Sources */,
+				22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */,
 				22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */,
+				22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */,
 				22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */,
 				22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */,
 				22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */,
