@@ -36,16 +36,3 @@ public final class DefaultFetchRocketsUseCase: FetchRocketsUseCase {
             .eraseToAnyPublisher()
     }
 }
-
-
-// MARK: - FetchRocketsUseCase Stub Implementation
-
-public final class StubFetchRocketsUseCase: FetchRocketsUseCase {
-    public init() {
-        // no implementation needed
-    }
-
-    public func execute() -> AnyPublisher<[Rocket], FetchRocketsUseCaseError> {
-        Just([]).setFailureType(to: FetchRocketsUseCaseError.self).eraseToAnyPublisher()
-    }
-}

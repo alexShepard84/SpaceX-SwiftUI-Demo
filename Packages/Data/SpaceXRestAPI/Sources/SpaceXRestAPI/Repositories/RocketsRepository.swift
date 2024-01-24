@@ -35,5 +35,6 @@ extension DefaultRocketsRepository: RocketsRepository {
             .map { (rocketDTO: RocketDTO) in
                 rocketDTO.toDomain()
             }
-        .eraseToAnyPublisher()    }
+            .eraseToAnyPublisher()
+    }
 }

@@ -148,8 +148,8 @@ fileprivate struct CodableItem: Codable, Equatable {
 
 /// Mock of a `Routable`
 fileprivate struct MockRouter: Routable {
-    var baseUrl: URL {
-        URL(string: "https://api.example.com")!
+    var baseUrl: URL? {
+        URL(string: "https://api.example.com")
     }
 
     var path: String {

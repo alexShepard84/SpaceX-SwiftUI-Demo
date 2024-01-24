@@ -6,8 +6,8 @@
 //
 
 import Combine
-import SpaceXDomain
 import Foundation
+import SpaceXDomain
 
 class MockRocketsRepository: RocketsRepository {
     func fetchRockets() -> AnyPublisher<[SpaceXDomain.Rocket], Error> {
@@ -18,7 +18,7 @@ class MockRocketsRepository: RocketsRepository {
                 country: "USA",
                 description: "This is a mock rocket.",
                 images: [],
-                firstFlight: nil, 
+                firstFlight: nil,
                 active: true
             ),
             Rocket(
@@ -36,7 +36,7 @@ class MockRocketsRepository: RocketsRepository {
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }
-    
+
     func fetchRocket(id: String) -> AnyPublisher<SpaceXDomain.Rocket, Error> {
         let mockRocket = Rocket(
             id: "1",
@@ -52,5 +52,4 @@ class MockRocketsRepository: RocketsRepository {
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }
-
 }

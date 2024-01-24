@@ -14,6 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "SpaceXDomain", path: "../Domain/SpaceXDomain"),
+        .package(name: "NetworkService", path: "../Services/NetworkService"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -21,11 +22,20 @@ let package = Package(
         .target(
             name: "SpaceXRestAPI",
             dependencies: [
+                "NetworkService",
                 "SpaceXDomain"
             ]
         ),
         .testTarget(
             name: "SpaceXRestAPITests",
-            dependencies: ["SpaceXRestAPI"]),
+            dependencies: [
+                "NetworkService",
+                "SpaceXRestAPI",
+                "SpaceXDomain"
+            ],
+            resources: [
+                .process("JSON")
+            ]
+        ),
     ]
 )

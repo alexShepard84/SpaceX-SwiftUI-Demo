@@ -20,7 +20,7 @@ struct RocketDTO: Codable {
     let stages, boosters: Int
     let costPerLaunch: Int
     let successRatePct: Int
-    let firstFlight: String
+    let firstFlight: String?
     let country, company: String
     let wikipedia: URL
     let description: String
