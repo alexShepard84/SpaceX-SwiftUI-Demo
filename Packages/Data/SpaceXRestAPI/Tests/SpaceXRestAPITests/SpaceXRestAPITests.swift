@@ -1,7 +1,7 @@
 import XCTest
-@testable import PokemonApiREST
+@testable import SpaceXRestAPI
 
-final class PokemonApiRESTTests: XCTestCase {
+final class SpaceXRestAPITests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

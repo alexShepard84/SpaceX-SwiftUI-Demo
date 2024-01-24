@@ -5,11 +5,13 @@
 //  Created by Alex Schäfer on 19.01.24.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct SwiftShowcaseApp: App {
+    var diContainer = DIContainer()
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self
@@ -25,7 +27,9 @@ struct SwiftShowcaseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // TODO: Setup Navigation
+//            ContentView()
+            RocketsListView(viewModel: RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase))
         }
         .modelContainer(sharedModelContainer)
     }

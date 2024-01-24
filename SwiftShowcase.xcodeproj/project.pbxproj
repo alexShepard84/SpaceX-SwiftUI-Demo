@@ -15,6 +15,17 @@
 		22AEB8B82B5A8851008D85F7 /* SwiftShowcaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8B72B5A8851008D85F7 /* SwiftShowcaseTests.swift */; };
 		22AEB8C22B5A8851008D85F7 /* SwiftShowcaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */; };
 		22AEB8C42B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */; };
+		22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C6382B5FB88100C9389C /* CoreServices */; };
+		22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63A2B5FB88500C9389C /* NetworkService */; };
+		22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63C2B5FB88800C9389C /* SpaceXDomain */; };
+		22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */; };
+		22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6422B5FBEF500C9389C /* RocketsListView.swift */; };
+		22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */; };
+		22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6472B5FC82400C9389C /* DIContainer.swift */; };
+		22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */; };
+		22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */; };
+		22FF29272B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */; };
+		22FF29292B611C6D00BE7DF1 /* RocketsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +47,9 @@
 
 /* Begin PBXFileReference section */
 		2207781D2B5D1F75006411E8 /* CoreServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreServices; sourceTree = "<group>"; };
-		2207781E2B5D1FA6006411E8 /* PokemonApiREST */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PokemonApiREST; sourceTree = "<group>"; };
-		2207781F2B5D1FC3006411E8 /* PokemonApiDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PokemonApiDomain; sourceTree = "<group>"; };
 		220778202B5D21BB006411E8 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkService; sourceTree = "<group>"; };
+		227AE7F42B5FA6C10072A268 /* SpaceXRestAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXRestAPI; sourceTree = "<group>"; };
+		227AE7F52B5FA6F20072A268 /* SpaceXDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXDomain; sourceTree = "<group>"; };
 		22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseApp.swift; sourceTree = "<group>"; };
 		22AEB8A62B5A8850008D85F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +61,13 @@
 		22AEB8BD2B5A8851008D85F7 /* SwiftShowcaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftShowcaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITests.swift; sourceTree = "<group>"; };
 		22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22C2C6422B5FBEF500C9389C /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
+		22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
+		22C2C6472B5FC82400C9389C /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDIContainer.swift; sourceTree = "<group>"; };
+		22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketsRepository.swift; sourceTree = "<group>"; };
+		22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRocketsUseCaseMock.swift; sourceTree = "<group>"; };
+		22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */,
+				22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */,
+				22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */,
+				22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +121,7 @@
 		2207781B2B5D1F3C006411E8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2207781E2B5D1FA6006411E8 /* PokemonApiREST */,
+				227AE7F42B5FA6C10072A268 /* SpaceXRestAPI */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -107,7 +129,7 @@
 		2207781C2B5D1F45006411E8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				2207781F2B5D1FC3006411E8 /* PokemonApiDomain */,
+				227AE7F52B5FA6F20072A268 /* SpaceXDomain */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -120,6 +142,7 @@
 				22AEB8B62B5A8851008D85F7 /* SwiftShowcaseTests */,
 				22AEB8C02B5A8851008D85F7 /* SwiftShowcaseUITests */,
 				22AEB8A22B5A8850008D85F7 /* Products */,
+				22C2C6372B5FB88100C9389C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +159,8 @@
 		22AEB8A32B5A8850008D85F7 /* SwiftShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				22C2C6462B5FC81600C9389C /* Application */,
+				22C2C6402B5FBECE00C9389C /* Scenes */,
 				22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */,
 				22AEB8A62B5A8850008D85F7 /* ContentView.swift */,
 				22AEB8A82B5A8850008D85F7 /* Item.swift */,
@@ -156,6 +181,8 @@
 		22AEB8B62B5A8851008D85F7 /* SwiftShowcaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				22FF29252B611BD400BE7DF1 /* Mocks */,
+				22FF29232B611BC800BE7DF1 /* Scenes */,
 				22AEB8B72B5A8851008D85F7 /* SwiftShowcaseTests.swift */,
 			);
 			path = SwiftShowcaseTests;
@@ -168,6 +195,88 @@
 				22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */,
 			);
 			path = SwiftShowcaseUITests;
+			sourceTree = "<group>";
+		};
+		22C2C6372B5FB88100C9389C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22C2C6402B5FBECE00C9389C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C6412B5FBEDE00C9389C /* Rockets */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		22C2C6412B5FBEDE00C9389C /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C6422B5FBEF500C9389C /* RocketsListView.swift */,
+				22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
+		22C2C6462B5FC81600C9389C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C64C2B60FAE200C9389C /* DIContainer */,
+				22C2C64B2B60FA6A00C9389C /* PreviewSupport */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		22C2C64B2B60FA6A00C9389C /* PreviewSupport */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C64D2B60FAF500C9389C /* Repositories */,
+			);
+			path = PreviewSupport;
+			sourceTree = "<group>";
+		};
+		22C2C64C2B60FAE200C9389C /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C6472B5FC82400C9389C /* DIContainer.swift */,
+				22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		22C2C64D2B60FAF500C9389C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		22FF29232B611BC800BE7DF1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22FF29242B611BCE00BE7DF1 /* Rockets */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		22FF29242B611BCE00BE7DF1 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
+		22FF29252B611BD400BE7DF1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +296,12 @@
 				220778182B5D1AB7006411E8 /* PBXTargetDependency */,
 			);
 			name = SwiftShowcase;
+			packageProductDependencies = (
+				22C2C6382B5FB88100C9389C /* CoreServices */,
+				22C2C63A2B5FB88500C9389C /* NetworkService */,
+				22C2C63C2B5FB88800C9389C /* SpaceXDomain */,
+				22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */,
+			);
 			productName = SwiftShowcase;
 			productReference = 22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */;
 			productType = "com.apple.product-type.application";
@@ -305,7 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AEB8A72B5A8850008D85F7 /* ContentView.swift in Sources */,
+				22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */,
+				22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */,
+				22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */,
 				22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */,
+				22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */,
+				22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */,
 				22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FF29272B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift in Sources */,
 				22AEB8B82B5A8851008D85F7 /* SwiftShowcaseTests.swift in Sources */,
+				22FF29292B611C6D00BE7DF1 /* RocketsListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +781,22 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 220778162B5D1A8F006411E8 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		22C2C6382B5FB88100C9389C /* CoreServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreServices;
+		};
+		22C2C63A2B5FB88500C9389C /* NetworkService */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkService;
+		};
+		22C2C63C2B5FB88800C9389C /* SpaceXDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpaceXDomain;
+		};
+		22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpaceXRestAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
