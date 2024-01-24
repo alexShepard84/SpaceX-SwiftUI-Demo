@@ -24,6 +24,8 @@
 		22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6472B5FC82400C9389C /* DIContainer.swift */; };
 		22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */; };
 		22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */; };
+		22FF29272B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */; };
+		22FF29292B611C6D00BE7DF1 /* RocketsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		22C2C6472B5FC82400C9389C /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDIContainer.swift; sourceTree = "<group>"; };
 		22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketsRepository.swift; sourceTree = "<group>"; };
+		22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRocketsUseCaseMock.swift; sourceTree = "<group>"; };
+		22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 		22AEB8B62B5A8851008D85F7 /* SwiftShowcaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				22FF29252B611BD400BE7DF1 /* Mocks */,
+				22FF29232B611BC800BE7DF1 /* Scenes */,
 				22AEB8B72B5A8851008D85F7 /* SwiftShowcaseTests.swift */,
 			);
 			path = SwiftShowcaseTests;
@@ -247,6 +253,30 @@
 				22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		22FF29232B611BC800BE7DF1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				22FF29242B611BCE00BE7DF1 /* Rockets */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		22FF29242B611BCE00BE7DF1 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
+		22FF29252B611BD400BE7DF1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,7 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22FF29272B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift in Sources */,
 				22AEB8B82B5A8851008D85F7 /* SwiftShowcaseTests.swift in Sources */,
+				22FF29292B611C6D00BE7DF1 /* RocketsListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
