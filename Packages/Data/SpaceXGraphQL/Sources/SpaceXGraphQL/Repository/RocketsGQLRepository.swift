@@ -5,20 +5,43 @@
 //  Created by Alex Schäfer on 24.01.24.
 //
 
+import Combine
 import Foundation
+import SpaceXDomain
+import NetworkService
 
 public enum RocketsGQLRepositoryError: Error {
     case invalid
 }
 
 public final class RocketsGQLRepository {
+    private let networkService: GQLNetworServiceProtocol
 
+    public init(networkService: GQLNetworServiceProtocol) {
+        self.networkService = networkService
+    }
 }
 
-//extension RocketsGraphQLRepository: RocketsRepository {
-//    public func fetchRockets() -> AnyPublisher<[Rocket], Error> {
-//    }
-//
-//    public func fetchRocket(id: String) -> AnyPublisher<Rocket, Error> {
-//    }
-//}
+extension RocketsGQLRepository: RocketsRepository {
+    public func fetchRockets() -> AnyPublisher<[Rocket], Error> {
+        networkService
+            .request(for: RocketsQuery())
+            .mapToModel()
+            .eraseToAnyPublisher()
+    }
+
+    public func fetchRocket(id: String) -> AnyPublisher<Rocket, Error> {
+        Fail(error: RocketsGQLRepositoryError.invalid).eraseToAnyPublisher()
+    }
+}
+
+// MARK: - Private helper to map GQL Model to Domain entity
+private extension Publisher {
+    /// Maps `RocketQuery.Data` into  `Rocket`
+    func mapToModel() -> Publishers.CompactMap<Self, [SpaceXDomain.Rocket]> where Self.Output == SpaceXGraphQL.RocketsQuery.Data {
+        compactMap { data in
+            data.rockets?.compactMap { $0?.toDomain() }
+        }
+    }
+}
+

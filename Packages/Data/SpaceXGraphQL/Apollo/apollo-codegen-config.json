@@ -1,5 +1,5 @@
 {
-  "schemaNamespace":"SpaceXAPI",
+  "schemaNamespace":"SpaceXGraphQL",
   "input":{
      "operationSearchPaths":[
         "**/*.graphql"
