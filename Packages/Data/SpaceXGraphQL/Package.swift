@@ -4,39 +4,40 @@
 import PackageDescription
 
 let package = Package(
-    name: "NetworkService",
+    name: "SpaceXGraphQL",
     platforms: [.iOS(.v17)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "NetworkService",
-            targets: ["NetworkService"]),
+            name: "SpaceXGraphQL",
+            targets: ["SpaceXGraphQL"]),
     ],
     dependencies: [
         .package(
-            url: "https://github.com/AliSoftware/OHHTTPStubs.git",
-            .upToNextMajor(from: "9.1.0")
+            name: "NetworkService",
+            path: "../Services/NetworkService"
         ),
         .package(
-            url: "https://github.com/joel-perry/ApolloCombine.git",
-            .upToNextMajor(from: "0.7.1")
-        )
+            name: "SpaceXDomain",
+            path: "../Domain/SpaceXDomain"
+        ),
+        .package(
+            url: "https://github.com/apollographql/apollo-ios.git",
+            .upToNextMajor(from: "1.5.0")
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "NetworkService",
+            name: "SpaceXGraphQL",
             dependencies: [
-                "ApolloCombine"
+                "NetworkService",
+                "SpaceXDomain"
             ]
         ),
         .testTarget(
-            name: "NetworkServiceTests",
-            dependencies: [
-                "NetworkService",
-                .product(name: "OHHTTPStubsSwift", package: "OHHTTPStubs")
-            ]
-        ),
+            name: "SpaceXGraphQLTests",
+            dependencies: ["SpaceXGraphQL"]),
     ]
 )
