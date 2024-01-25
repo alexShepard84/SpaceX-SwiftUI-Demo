@@ -12,10 +12,10 @@ import SpaceXGraphQL
 import SpaceXRestAPI
 
 class DIContainer {
+    // MARK: NetworkService
     lazy var networkService: NetworkServiceProtocol = NetworkService()
 
     lazy var gqlNetworkService: GQLNetworServiceProtocol = {
-        // TODO: Read URL from environment config
         let url = "https://spacex-production.up.railway.app"
         guard let endpointURL = URL(string: url) else {
             fatalError("URL \(url) is invalid")
@@ -25,7 +25,11 @@ class DIContainer {
             .networkService
     }()
 
+    // MARK: Default Dependencies
     lazy var rocketsRepository: RocketsRepository = DefaultRocketsRepository(networkService: networkService)
     lazy var fetchRocketsUseCase: FetchRocketsUseCase = DefaultFetchRocketsUseCase(repository: rocketsRepository)
+
+    // MARK: GraphQL Dependencies
     lazy var rocketsGQLRepository: RocketsRepository = RocketsGQLRepository(networkService: gqlNetworkService)
+    lazy var fetchRocketsGQLUseCase: FetchRocketsUseCase = DefaultFetchRocketsUseCase(repository: rocketsGQLRepository)
 }
