@@ -7,8 +7,10 @@
 
 import Combine
 import Foundation
+import OSLog
 import SpaceXDomain
 import NetworkService
+import OSLog
 
 public enum RocketsGQLRepositoryError: Error {
     case invalid
@@ -16,6 +18,8 @@ public enum RocketsGQLRepositoryError: Error {
 
 public final class RocketsGQLRepository {
     private let networkService: GQLNetworServiceProtocol
+    // TODO: Inject
+    private let logger = Logger()
 
     public init(networkService: GQLNetworServiceProtocol) {
         self.networkService = networkService
@@ -24,7 +28,9 @@ public final class RocketsGQLRepository {
 
 extension RocketsGQLRepository: RocketsRepository {
     public func fetchRockets() -> AnyPublisher<[Rocket], Error> {
-        networkService
+        logger.info("Fetch data from GraphQL")
+
+        return networkService
             .request(for: RocketsQuery())
             .mapToModel()
             .eraseToAnyPublisher()
