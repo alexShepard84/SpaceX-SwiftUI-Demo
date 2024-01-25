@@ -85,6 +85,9 @@ fastlane/test_output
 vendor/
 
 # Apollo
-Packages/Data/SpaceXGraphQL/Apollo/apollo-ios-cli
-Packages/Data/SpaceXGraphQL/Apollo/Sources/Generated
+Packages/Data/SpaceXGraphQL/apollo-ios-cli
+Packages/Data/SpaceXGraphQL/Apollo/Sources/
+Packages/Data/SpaceXGraphQL/graphql
+
 **/*.graphql.swift
+**/*.resolved

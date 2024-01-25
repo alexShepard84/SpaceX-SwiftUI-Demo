@@ -14,14 +14,6 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            name: "NetworkService",
-            path: "../Services/NetworkService"
-        ),
-        .package(
-            name: "SpaceXDomain",
-            path: "../Domain/SpaceXDomain"
-        ),
-        .package(
             url: "https://github.com/apollographql/apollo-ios.git",
             .upToNextMajor(from: "1.5.0")
         ),
@@ -30,11 +22,7 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SpaceXGraphQL",
-            dependencies: [
-                "NetworkService",
-                "SpaceXDomain"
-            ]
+            name: "SpaceXGraphQL"
         ),
         .testTarget(
             name: "SpaceXGraphQLTests",

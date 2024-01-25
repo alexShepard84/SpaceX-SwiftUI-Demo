@@ -1,6 +1,7 @@
 # Makefile
 
 SPACEX_GRAPHQL_DIR=./Packages/Data/SpaceXGraphQL
+APOLLO_DIR=$(SPACEX_GRAPHQL_DIR)/Apollo
 
 # Step 1: Install the Apollo iOS CLI
 install-apollo-cli:
@@ -10,12 +11,12 @@ install-apollo-cli:
 # Step 2: Download the GraphQL schema
 fetch-schema:
 	@echo "Downloading GraphQL Schema..."
-	cd $(SPACEX_GRAPHQL_DIR)/Apollo && ./apollo-ios-cli fetch-schema
+	cd $(SPACEX_GRAPHQL_DIR) && ./apollo-ios-cli fetch-schema --path Apollo/apollo-codegen-config.json
 
 # Step 3: Generate Swift code from GraphQL files
 generate:
 	@echo "Generating Swift Code from GraphQL files..."
-	cd $(SPACEX_GRAPHQL_DIR)/Apollo && ./apollo-ios-cli generate
+	cd $(SPACEX_GRAPHQL_DIR) && ./apollo-ios-cli generate --path Apollo/apollo-codegen-config.json
 
 # Complete setup process
 setup: install-apollo-cli fetch-schema generate
