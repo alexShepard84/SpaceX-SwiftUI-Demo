@@ -24,6 +24,8 @@
 		22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6472B5FC82400C9389C /* DIContainer.swift */; };
 		22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */; };
 		22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */; };
+		22E3D4482B626A7A00E88DC7 /* SpaceXGraphQL in Frameworks */ = {isa = PBXBuildFile; productRef = 22E3D4472B626A7A00E88DC7 /* SpaceXGraphQL */; };
+		22E6FD3A2B6279EE00A7937C /* RocketsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6FD392B6279EE00A7937C /* RocketsContainerView.swift */; };
 		22FF29272B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */; };
 		22FF29292B611C6D00BE7DF1 /* RocketsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */; };
 /* End PBXBuildFile section */
@@ -66,8 +68,10 @@
 		22C2C6472B5FC82400C9389C /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDIContainer.swift; sourceTree = "<group>"; };
 		22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketsRepository.swift; sourceTree = "<group>"; };
+		22E6FD392B6279EE00A7937C /* RocketsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsContainerView.swift; sourceTree = "<group>"; };
 		22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRocketsUseCaseMock.swift; sourceTree = "<group>"; };
 		22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModelTests.swift; sourceTree = "<group>"; };
+		22FF292A2B6122A400BE7DF1 /* SpaceXGraphQL */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXGraphQL; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			files = (
 				22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */,
 				22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */,
+				22E3D4482B626A7A00E88DC7 /* SpaceXGraphQL in Frameworks */,
 				22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */,
 				22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */,
 			);
@@ -121,6 +126,7 @@
 		2207781B2B5D1F3C006411E8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				22FF292A2B6122A400BE7DF1 /* SpaceXGraphQL */,
 				227AE7F42B5FA6C10072A268 /* SpaceXRestAPI */,
 			);
 			path = Data;
@@ -217,6 +223,7 @@
 			children = (
 				22C2C6422B5FBEF500C9389C /* RocketsListView.swift */,
 				22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */,
+				22E6FD392B6279EE00A7937C /* RocketsContainerView.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 				22C2C63A2B5FB88500C9389C /* NetworkService */,
 				22C2C63C2B5FB88800C9389C /* SpaceXDomain */,
 				22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */,
+				22E3D4472B626A7A00E88DC7 /* SpaceXGraphQL */,
 			);
 			productName = SwiftShowcase;
 			productReference = 22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */;
@@ -424,6 +432,7 @@
 				22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */,
 				22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */,
 				22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */,
+				22E6FD3A2B6279EE00A7937C /* RocketsContainerView.swift in Sources */,
 				22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */,
 				22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */,
 				22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */,
@@ -797,6 +806,10 @@
 		22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpaceXRestAPI;
+		};
+		22E3D4472B626A7A00E88DC7 /* SpaceXGraphQL */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpaceXGraphQL;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

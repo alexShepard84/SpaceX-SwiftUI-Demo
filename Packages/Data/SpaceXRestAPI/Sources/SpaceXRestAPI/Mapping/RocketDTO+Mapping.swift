@@ -1,5 +1,5 @@
 //
-//  Rocket+Mapping.swift
+//  RocketDTO+Mapping.swift
 //
 //
 //  Created by Alex Schäfer on 23.01.24.

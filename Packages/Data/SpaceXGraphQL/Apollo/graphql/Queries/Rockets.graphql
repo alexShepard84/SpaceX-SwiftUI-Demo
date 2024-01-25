@@ -1,0 +1,10 @@
+query Rockets {
+  rockets {
+    active
+    country
+    name
+    id
+    first_flight
+    description
+  }
+}
