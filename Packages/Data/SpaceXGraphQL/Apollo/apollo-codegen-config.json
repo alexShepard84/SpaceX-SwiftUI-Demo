@@ -1,0 +1,48 @@
+{
+  "schemaNamespace":"SpaceXGraphQL",
+  "input":{
+     "operationSearchPaths":[
+        "**/*.graphql"
+     ],
+     "schemaSearchPaths":[
+        "**/*.graphqls"
+     ]
+  },
+  "output":{
+     "testMocks":{
+        "none":{
+           
+        }
+     },
+     "schemaTypes":{
+        "path":"../Sources/SpaceXGraphQL/Apollo/Generated/",
+        "moduleType":{
+           "other":{}
+        }
+     },
+     "operations":{
+        "inSchemaModule":{
+           
+        }
+     }
+  },
+  "schemaDownloadConfiguration":{
+     "downloadMethod":{
+        "introspection":{
+           "endpointURL":"https://spacex-production.up.railway.app",
+           "httpMethod":{
+              "POST":{
+                 
+              }
+           },
+           "includeDeprecatedInputValues":false,
+           "outputFormat":"SDL"
+        }
+     },
+     "downloadTimeout":60,
+     "headers":[
+        
+     ],
+     "outputPath":"./graphql/schema.graphqls"
+  }
+}

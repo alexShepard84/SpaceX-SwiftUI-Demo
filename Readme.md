@@ -99,6 +99,38 @@ bundle exec fastlane [lane_name]
 
 Using `bundle exec` ensures that you are using the correct versions of the gems set for this project and avoids conflicts with other gem versions that may be installed globally on your system.
 
+### Apollo GraphQL Setup
+
+This project uses Apollo GraphQL for handling GraphQL queries. The setup process is streamlined using a Makefile.
+
+### Installing Apollo GraphQL CLI
+The Apollo GraphQL CLI is essential for downloading the GraphQL schema and generating Swift code from GraphQL files. The CLI is installed and managed via the Makefile.
+
+To install the Apollo GraphQL CLI and set up the necessary configurations, run:
+
+```bash
+make setup
+```
+
+This command performs the following actions:
+- Installs the Apollo iOS CLI using Swift Package Manager in the `Packages/Data/SpaceXGraphQL` directory.
+- Downloads the latest GraphQL schema based on the configuration in `Packages/Data/SpaceXGraphQL/Apollo/apollo-codegen-config.json`.
+- Generates Swift code based on the GraphQL schema and operations defined in the project.
+
+### Updating GraphQL Schema and Code Generation
+To update the GraphQL schema or regenerate Swift code after making changes to GraphQL queries or mutations, run the following commands:
+
+```bash
+make fetch-schema
+make generate
+```
+
+### Troubleshooting
+If you encounter any issues with the Apollo setup, ensure that:
+- The correct GraphQL endpoint and configurations are set in `Packages/Data/SpaceXGraphQL/Apollo/apollo-codegen-config.json`.
+
+For more detailed information about Apollo GraphQL and its CLI, refer to the [Apollo GraphQL documentation](https://www.apollographql.com/docs/).
+
 ## Contributions
 Feedback, suggestions, and contributions are welcome. Please use GitHub issues and pull requests.
 

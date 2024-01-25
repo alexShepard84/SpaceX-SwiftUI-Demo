@@ -6,8 +6,10 @@
 //
 
 import Combine
+import OSLog
 import SpaceXDomain
 import NetworkService
+import ApolloAPI
 
 public enum RocketsRepositoryError: Error {
     case invalid
@@ -15,6 +17,8 @@ public enum RocketsRepositoryError: Error {
 
 public final class DefaultRocketsRepository {
     private let networkService: NetworkServiceProtocol
+    // TODO: Inject
+    private let logger = Logger()
 
     public init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
@@ -23,7 +27,9 @@ public final class DefaultRocketsRepository {
 
 extension DefaultRocketsRepository: RocketsRepository {
     public func fetchRockets() -> AnyPublisher<[Rocket], Error> {
-        networkService.request(SpaceXRestAPIRouter.rockets)
+        logger.info("Fetch data from REST API")
+
+        return networkService.request(SpaceXRestAPIRouter.rockets)
             .map { (items: [RocketDTO]) in
                 items.map { $0.toDomain() }
             }

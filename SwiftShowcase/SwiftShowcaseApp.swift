@@ -28,8 +28,10 @@ struct SwiftShowcaseApp: App {
     var body: some Scene {
         WindowGroup {
             // TODO: Setup Navigation
-//            ContentView()
-            RocketsListView(viewModel: RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase))
+            RocketsContainerView(
+                restViewModel: RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase),
+                gqlViewModel: RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsGQLUseCase)
+            )
         }
         .modelContainer(sharedModelContainer)
     }
