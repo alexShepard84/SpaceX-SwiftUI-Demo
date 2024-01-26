@@ -52,7 +52,10 @@ private extension RocketsListView {
 
 // MARK: - Views
 private extension RocketsListView {
+    /// `GridView` displays a grid of rocket items.
+    /// It adapts its layout based on the current horizontal and vertical size classes.
     struct GridView: View {
+        // Environment properties to detect the current size class of the device.
         @Environment(\.horizontalSizeClass) var horizontalSizeClass
         @Environment(\.verticalSizeClass) var verticalSizeClass
 
@@ -74,8 +77,10 @@ private extension RocketsListView {
             .onChange(of: verticalSizeClass) { updateGridLayout() }
         }
 
+        /// Updates the grid layout based on the current size class.
         private func updateGridLayout() {
             let columns: Int
+            // Determine the number of columns based on size class.
             switch (horizontalSizeClass, verticalSizeClass) {
             case (.compact, .compact), (.regular, _): // iPhone Landscape und iPad
                 columns = 2
@@ -86,6 +91,7 @@ private extension RocketsListView {
         }
     }
 
+    /// `RocketListItemView` represents a single rocket item
     struct RocketListItemView: View {
         var model: Rocket
 
@@ -126,6 +132,7 @@ private extension RocketsListView {
     }
 }
 
+// MARK: - Preview
 #Preview {
     let diContainer = PreviewDIContainer()
     let viewModel = RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase)
