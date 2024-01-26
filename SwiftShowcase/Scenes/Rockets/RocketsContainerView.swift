@@ -29,7 +29,3 @@ struct RocketsContainerView: View {
         }
     }
 }
-
-//#Preview {
-//    RocketsContainerView()
-//}
