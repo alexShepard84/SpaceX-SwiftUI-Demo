@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// Entity `
-public struct Rocket: Equatable {
+/// Entity `Rocket` 
+public struct Rocket: Identifiable, Equatable {
     public let id: String
     public let name: String
     public let country: String

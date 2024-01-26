@@ -17,7 +17,9 @@ class MockRocketsRepository: RocketsRepository {
                 name: "Mock Rocket 1",
                 country: "USA",
                 description: "This is a mock rocket.",
-                images: [],
+                images: [
+                    URL(string: "https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg")!
+                ],
                 firstFlight: nil,
                 active: true
             ),
@@ -26,7 +28,31 @@ class MockRocketsRepository: RocketsRepository {
                 name: "Mock Rocket 2",
                 country: "USA",
                 description: "This is a another mock rocket.",
-                images: [],
+                images: [
+                    URL(string: "https://farm5.staticflickr.com/4645/38583830575_3f0f7215e6_b.jpg")!
+                ],
+                firstFlight: nil,
+                active: true
+            ),
+            Rocket(
+                id: "3",
+                name: "Mock Rocket 3",
+                country: "USA",
+                description: "This is a another mock rocket.",
+                images: [
+                    URL(string: "https://farm5.staticflickr.com/4696/40126460511_b15bf84c85_b.jpg")!
+                ],
+                firstFlight: nil,
+                active: true
+            ),
+            Rocket(
+                id: "4",
+                name: "Mock Rocket 4",
+                country: "USA",
+                description: "This is a another mock rocket.",
+                images: [
+                    URL(string: "https://farm5.staticflickr.com/4711/40126461411_aabc643fd8_b.jpg")!
+                ],
                 firstFlight: nil,
                 active: true
             )
