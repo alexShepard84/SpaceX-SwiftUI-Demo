@@ -10,12 +10,15 @@ import SwiftUI
 
 struct RocketsListView: View {
     @StateObject var viewModel: RocketsListViewModel
+    @State private var navPath = NavigationPath()
+    @State private var selectedRocket: Rocket?
 
     var body: some View {
-        NavigationStack {
-            content
-                .navigationTitle("Rockets")
-        }
+        content
+            .navigationTitle("Rockets")
+            .navigationDestination(item: $selectedRocket) { rocket in
+                viewModel.makeRocketDetailView(rocket)
+            }
         .task {
             viewModel.loadSubject.send(())
         }
@@ -33,7 +36,7 @@ private extension RocketsListView {
             case .loading, .idle:
                 ProgressView()
             case .finished(let models):
-                GridView(models: models)
+                GridView(models: models, selectedModel: $selectedRocket)
             case .empty:
                 ContentUnavailableView(
                     "All rockets are on a mission in outer space 🚀",
@@ -60,6 +63,7 @@ private extension RocketsListView {
         @Environment(\.verticalSizeClass) var verticalSizeClass
 
         var models: [Rocket]
+        @Binding var selectedModel: Rocket?
 
         @State private var gridLayout = [GridItem()]
 
@@ -68,6 +72,9 @@ private extension RocketsListView {
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 15) {
                     ForEach(models) { model in
                         RocketListItemView(model: model)
+                            .onTapGesture {
+                                selectedModel = model
+                            }
                     }
                 }
                 .padding()
@@ -133,8 +140,20 @@ private extension RocketsListView {
 }
 
 // MARK: - Preview
-#Preview {
-    let diContainer = PreviewDIContainer()
-    let viewModel = RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase)
-    return RocketsListView(viewModel: viewModel)
+//#Preview {
+//    let diContainer = PreviewDIContainer()
+//    let viewModel = RocketsListViewModel(
+//        fetchRocketsUseCase: diContainer.fetchRocketsUseCase,
+//        sceneFactory: <#T##RocketsSceneFactoryProtocol#>
+//    )
+//
+//    return RocketsListView(viewModel: viewModel)
+//}
+
+
+extension Rocket: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
+    }
 }

@@ -16,6 +16,9 @@
 		22AEB8C22B5A8851008D85F7 /* SwiftShowcaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */; };
 		22AEB8C42B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */; };
 		22B0DBBB2B6281210082982B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22B0DBBA2B6281210082982B /* SDWebImageSwiftUI */; };
+		22B0DBBE2B63E9E30082982B /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBBD2B63E9E30082982B /* RocketDetailView.swift */; };
+		22B0DBC02B63E9F40082982B /* RocketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBBF2B63E9F40082982B /* RocketDetailViewModel.swift */; };
+		22B0DBC22B63EA570082982B /* RocketsSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBC12B63EA570082982B /* RocketsSceneFactory.swift */; };
 		22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C6382B5FB88100C9389C /* CoreServices */; };
 		22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63A2B5FB88500C9389C /* NetworkService */; };
 		22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63C2B5FB88800C9389C /* SpaceXDomain */; };
@@ -64,6 +67,9 @@
 		22AEB8BD2B5A8851008D85F7 /* SwiftShowcaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftShowcaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITests.swift; sourceTree = "<group>"; };
 		22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22B0DBBD2B63E9E30082982B /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
+		22B0DBBF2B63E9F40082982B /* RocketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewModel.swift; sourceTree = "<group>"; };
+		22B0DBC12B63EA570082982B /* RocketsSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsSceneFactory.swift; sourceTree = "<group>"; };
 		22C2C6422B5FBEF500C9389C /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
 		22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
 		22C2C6472B5FC82400C9389C /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -228,6 +234,9 @@
 				22C2C6422B5FBEF500C9389C /* RocketsListView.swift */,
 				22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */,
 				22E6FD392B6279EE00A7937C /* RocketsContainerView.swift */,
+				22B0DBBD2B63E9E30082982B /* RocketDetailView.swift */,
+				22B0DBBF2B63E9F40082982B /* RocketDetailViewModel.swift */,
+				22B0DBC12B63EA570082982B /* RocketsSceneFactory.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -428,8 +437,11 @@
 				22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */,
 				22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */,
 				22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */,
+				22B0DBC22B63EA570082982B /* RocketsSceneFactory.swift in Sources */,
 				22E6FD3A2B6279EE00A7937C /* RocketsContainerView.swift in Sources */,
+				22B0DBC02B63E9F40082982B /* RocketDetailViewModel.swift in Sources */,
 				22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */,
+				22B0DBBE2B63E9E30082982B /* RocketDetailView.swift in Sources */,
 				22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */,
 				22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */,
 			);

@@ -29,16 +29,17 @@ final class RocketsListViewModel: ObservableObject {
 
     // MARK: Dependencies
     private let fetchRocketsUseCase: FetchRocketsUseCase
+    private let sceneFactory: RocketsSceneFactoryProtocol
 
-    init(fetchRocketsUseCase: FetchRocketsUseCase) {
+    init(fetchRocketsUseCase: FetchRocketsUseCase, sceneFactory: RocketsSceneFactoryProtocol) {
         self.fetchRocketsUseCase = fetchRocketsUseCase
+        self.sceneFactory = sceneFactory
 
         setupSubscriber()
     }
 }
 
 // MARK: - Setup
-
 private extension RocketsListViewModel {
     func setupSubscriber() {
         loadSubject
@@ -65,6 +66,14 @@ private extension RocketsListViewModel {
     }
 }
 
+// MARK: - Routing
+extension RocketsListViewModel {
+    func makeRocketDetailView(_ rocket: Rocket) -> RocketDetailView {
+        sceneFactory.makeRocketDetailView(with: rocket)
+    }
+}
+
+// MARK: - Extensions
 extension FetchRocketsUseCaseError: LocalizedError {
     public var errorDescription: String? {
         switch self {
