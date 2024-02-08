@@ -140,15 +140,16 @@ private extension RocketsListView {
 }
 
 // MARK: - Preview
-//#Preview {
-//    let diContainer = PreviewDIContainer()
-//    let viewModel = RocketsListViewModel(
-//        fetchRocketsUseCase: diContainer.fetchRocketsUseCase,
-//        sceneFactory: <#T##RocketsSceneFactoryProtocol#>
-//    )
-//
-//    return RocketsListView(viewModel: viewModel)
-//}
+#Preview {
+    let diContainer = PreviewDIContainer()
+    let sceneFactory = RocketsSceneFactory(dependencies: diContainer)
+    let viewModel = RocketsListViewModel(
+        fetchRocketsUseCase: diContainer.fetchRocketsUseCase,
+        sceneFactory: sceneFactory
+    )
+
+    return RocketsListView(viewModel: viewModel)
+}
 
 extension Rocket: Hashable {
     public func hash(into hasher: inout Hasher) {

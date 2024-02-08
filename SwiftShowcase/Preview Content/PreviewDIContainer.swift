@@ -10,4 +10,8 @@ import SpaceXDomain
 class PreviewDIContainer {
     lazy var mockRocketsRepository: RocketsRepository = MockRocketsRepository()
     lazy var fetchRocketsUseCase: FetchRocketsUseCase = DefaultFetchRocketsUseCase(repository: mockRocketsRepository)
+    lazy var fetchRocketsGQLUseCase: FetchRocketsUseCase = DefaultFetchRocketsUseCase(repository: mockRocketsRepository)
+}
+
+extension PreviewDIContainer: RocketsSceneFactoryDependencies {
 }
