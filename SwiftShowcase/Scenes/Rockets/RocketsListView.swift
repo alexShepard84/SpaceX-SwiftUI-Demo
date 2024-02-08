@@ -129,7 +129,7 @@ private extension RocketsListView {
                 }
                 .overlay(alignment: .bottomLeading) {
                     Text(model.name)
-                        .font(.largeTitle)
+                        .font(.spaceXLargeTitle)
                         .padding(8)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)

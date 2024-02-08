@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		223DAD1D2B6A85400060EE58 /* RocketMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DAD1C2B6A85400060EE58 /* RocketMock.swift */; };
+		22448E512B74F42B00F143EA /* D-DINExp-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E482B74F42A00F143EA /* D-DINExp-Italic.otf */; };
+		22448E522B74F42B00F143EA /* D-DINExp.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E492B74F42A00F143EA /* D-DINExp.otf */; };
+		22448E532B74F42B00F143EA /* D-DIN-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4A2B74F42A00F143EA /* D-DIN-Bold.otf */; };
+		22448E542B74F42B00F143EA /* D-DIN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4B2B74F42A00F143EA /* D-DIN.otf */; };
+		22448E552B74F42B00F143EA /* D-DINExp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4C2B74F42A00F143EA /* D-DINExp-Bold.otf */; };
+		22448E562B74F42B00F143EA /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4D2B74F42A00F143EA /* SIL Open Font License.txt */; };
+		22448E572B74F42B00F143EA /* D-DIN-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4E2B74F42B00F143EA /* D-DIN-Italic.otf */; };
+		22448E582B74F42B00F143EA /* D-DINCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4F2B74F42B00F143EA /* D-DINCondensed.otf */; };
+		22448E592B74F42B00F143EA /* D-DINCondensed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E502B74F42B00F143EA /* D-DINCondensed-Bold.otf */; };
+		22448E5C2B74F65C00F143EA /* DDinFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22448E5B2B74F65C00F143EA /* DDinFont.swift */; };
+		22448E5E2B74F6DA00F143EA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22448E5D2B74F6DA00F143EA /* Font.swift */; };
 		2294C8CC2B74CA4B0031EF9C /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294C8CB2B74CA4B0031EF9C /* Formatter.swift */; };
 		2294C8CE2B74D1290031EF9C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2294C8CD2B74D1290031EF9C /* Localizable.xcstrings */; };
 		22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */; };
@@ -58,6 +69,18 @@
 		2207781D2B5D1F75006411E8 /* CoreServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreServices; sourceTree = "<group>"; };
 		220778202B5D21BB006411E8 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkService; sourceTree = "<group>"; };
 		223DAD1C2B6A85400060EE58 /* RocketMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketMock.swift; sourceTree = "<group>"; };
+		22448E482B74F42A00F143EA /* D-DINExp-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Italic.otf"; sourceTree = "<group>"; };
+		22448E492B74F42A00F143EA /* D-DINExp.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp.otf"; sourceTree = "<group>"; };
+		22448E4A2B74F42A00F143EA /* D-DIN-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Bold.otf"; sourceTree = "<group>"; };
+		22448E4B2B74F42A00F143EA /* D-DIN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN.otf"; sourceTree = "<group>"; };
+		22448E4C2B74F42A00F143EA /* D-DINExp-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Bold.otf"; sourceTree = "<group>"; };
+		22448E4D2B74F42A00F143EA /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		22448E4E2B74F42B00F143EA /* D-DIN-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Italic.otf"; sourceTree = "<group>"; };
+		22448E4F2B74F42B00F143EA /* D-DINCondensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINCondensed.otf"; sourceTree = "<group>"; };
+		22448E502B74F42B00F143EA /* D-DINCondensed-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINCondensed-Bold.otf"; sourceTree = "<group>"; };
+		22448E5A2B74F47300F143EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		22448E5B2B74F65C00F143EA /* DDinFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDinFont.swift; sourceTree = "<group>"; };
+		22448E5D2B74F6DA00F143EA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		227AE7F42B5FA6C10072A268 /* SpaceXRestAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXRestAPI; sourceTree = "<group>"; };
 		227AE7F52B5FA6F20072A268 /* SpaceXDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXDomain; sourceTree = "<group>"; };
 		2294C8CB2B74CA4B0031EF9C /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
@@ -162,6 +185,40 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		22448E452B74F3E800F143EA /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				22448E462B74F40600F143EA /* Fonts */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		22448E462B74F40600F143EA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				22448E472B74F41B00F143EA /* D-DIN */,
+				22448E5D2B74F6DA00F143EA /* Font.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		22448E472B74F41B00F143EA /* D-DIN */ = {
+			isa = PBXGroup;
+			children = (
+				22448E4A2B74F42A00F143EA /* D-DIN-Bold.otf */,
+				22448E4E2B74F42B00F143EA /* D-DIN-Italic.otf */,
+				22448E4B2B74F42A00F143EA /* D-DIN.otf */,
+				22448E502B74F42B00F143EA /* D-DINCondensed-Bold.otf */,
+				22448E4F2B74F42B00F143EA /* D-DINCondensed.otf */,
+				22448E4C2B74F42A00F143EA /* D-DINExp-Bold.otf */,
+				22448E482B74F42A00F143EA /* D-DINExp-Italic.otf */,
+				22448E492B74F42A00F143EA /* D-DINExp.otf */,
+				22448E4D2B74F42A00F143EA /* SIL Open Font License.txt */,
+				22448E5B2B74F65C00F143EA /* DDinFont.swift */,
+			);
+			path = "D-DIN";
+			sourceTree = "<group>";
+		};
 		2294C8CA2B74CA400031EF9C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +252,7 @@
 		22AEB8A32B5A8850008D85F7 /* SwiftShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				22448E5A2B74F47300F143EA /* Info.plist */,
 				22C2C6462B5FC81600C9389C /* Application */,
 				22C2C6402B5FBECE00C9389C /* Scenes */,
 				22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */,
@@ -267,6 +325,7 @@
 		22C2C6462B5FC81600C9389C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				22448E452B74F3E800F143EA /* Design */,
 				2294C8CA2B74CA400031EF9C /* Helper */,
 				22C2C64C2B60FAE200C9389C /* DIContainer */,
 				2294C8CD2B74D1290031EF9C /* Localizable.xcstrings */,
@@ -433,8 +492,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AEB8AE2B5A8851008D85F7 /* Preview Assets.xcassets in Resources */,
+				22448E532B74F42B00F143EA /* D-DIN-Bold.otf in Resources */,
+				22448E582B74F42B00F143EA /* D-DINCondensed.otf in Resources */,
 				22AEB8AB2B5A8851008D85F7 /* Assets.xcassets in Resources */,
+				22448E562B74F42B00F143EA /* SIL Open Font License.txt in Resources */,
+				22448E542B74F42B00F143EA /* D-DIN.otf in Resources */,
+				22448E512B74F42B00F143EA /* D-DINExp-Italic.otf in Resources */,
+				22448E592B74F42B00F143EA /* D-DINCondensed-Bold.otf in Resources */,
+				22448E572B74F42B00F143EA /* D-DIN-Italic.otf in Resources */,
+				22448E522B74F42B00F143EA /* D-DINExp.otf in Resources */,
 				2294C8CE2B74D1290031EF9C /* Localizable.xcstrings in Resources */,
+				22448E552B74F42B00F143EA /* D-DINExp-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,8 +536,10 @@
 				22B0DBC22B63EA570082982B /* RocketsSceneFactory.swift in Sources */,
 				22E6FD3A2B6279EE00A7937C /* RocketsContainerView.swift in Sources */,
 				22B0DBC02B63E9F40082982B /* RocketDetailViewModel.swift in Sources */,
+				22448E5C2B74F65C00F143EA /* DDinFont.swift in Sources */,
 				22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */,
 				2294C8CC2B74CA4B0031EF9C /* Formatter.swift in Sources */,
+				22448E5E2B74F6DA00F143EA /* Font.swift in Sources */,
 				22B0DBBE2B63E9E30082982B /* RocketDetailView.swift in Sources */,
 				22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */,
 				22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */,
@@ -646,6 +716,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftShowcase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -676,6 +747,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftShowcase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

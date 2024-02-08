@@ -38,6 +38,7 @@ private extension RocketDetailView {
     var descriptionAndDataVStack: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text(viewModel.rocket.description)
+                .font(.spaceXBody)
             technicalData
         }
     }
@@ -45,6 +46,7 @@ private extension RocketDetailView {
     var descriptionAndDataHStack: some View {
         HStack(alignment: .top, spacing: 20) {
             Text(viewModel.rocket.description)
+                .font(.spaceXBody)
             technicalData
         }
     }
@@ -52,7 +54,7 @@ private extension RocketDetailView {
     var technicalData: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Overview")
-                .font(.title)
+                .font(.spaceXTitle2)
 
             DataRow(title: "Height", value: viewModel.formattedHeight)
             DataRow(title: "Width", value: viewModel.formattedDiameter)
@@ -71,7 +73,7 @@ private extension RocketDetailView {
         // TODO: Launches List
         Group {
             Text("Launches")
-                .font(.title)
+                .font(.spaceXTitle2)
             Text("Coming Soon")
         }
     }
@@ -122,10 +124,10 @@ private extension RocketDetailView {
         var body: some View {
             HStack {
                 Text(title)
-                    .font(.headline)
+                    .font(.spaceXHeadline)
                 Spacer()
                 Text(value)
-                    .font(.subheadline)
+                    .font(.spaceXSubheadline)
             }
         }
     }
