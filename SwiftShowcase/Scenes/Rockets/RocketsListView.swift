@@ -150,7 +150,6 @@ private extension RocketsListView {
 //    return RocketsListView(viewModel: viewModel)
 //}
 
-
 extension Rocket: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)

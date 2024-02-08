@@ -22,7 +22,8 @@ class MockRocketsRepository: RocketsRepository {
                     URL(string: "https://farm5.staticflickr.com/4599/38583829295_581f34dd84_b.jpg")!
                 ],
                 firstFlight: nil,
-                active: true
+                active: true,
+                technicalData: RocketTechnicalData.mock
             ),
             Rocket(
                 id: "2",
@@ -33,7 +34,8 @@ class MockRocketsRepository: RocketsRepository {
                     URL(string: "https://farm5.staticflickr.com/4645/38583830575_3f0f7215e6_b.jpg")!
                 ],
                 firstFlight: nil,
-                active: true
+                active: true,
+                technicalData: RocketTechnicalData.mock
             ),
             Rocket(
                 id: "3",
@@ -44,7 +46,8 @@ class MockRocketsRepository: RocketsRepository {
                     URL(string: "https://farm5.staticflickr.com/4696/40126460511_b15bf84c85_b.jpg")!
                 ],
                 firstFlight: nil,
-                active: true
+                active: true,
+                technicalData: RocketTechnicalData.mock
             ),
             Rocket(
                 id: "4",
@@ -55,7 +58,8 @@ class MockRocketsRepository: RocketsRepository {
                     URL(string: "https://farm5.staticflickr.com/4711/40126461411_aabc643fd8_b.jpg")!
                 ],
                 firstFlight: nil,
-                active: true
+                active: true,
+                technicalData: RocketTechnicalData.mock
             )
         ]
 
@@ -72,7 +76,8 @@ class MockRocketsRepository: RocketsRepository {
             description: "This is a mock rocket.",
             images: [],
             firstFlight: nil,
-            active: true
+            active: true,
+            technicalData: RocketTechnicalData.mock
         )
 
         return Just(mockRocket)
