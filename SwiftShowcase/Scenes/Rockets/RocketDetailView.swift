@@ -24,7 +24,7 @@ struct RocketDetailView: View {
 
                 VStack {
                     DataRow(title: "Height", value: viewModel.formattedHeight)
-                    DataRow(title: "Diameter", value: viewModel.formattedDiameter)
+                    DataRow(title: "Width", value: viewModel.formattedDiameter)
                     DataRow(title: "Mass", value: viewModel.formattedMass)
                     ForEach(viewModel.formattedPayloadWeights) { weight in
                         DataRow(
@@ -83,7 +83,7 @@ private extension RocketDetailView {
     }
 
     struct DataRow: View {
-        var title: String
+        var title: LocalizedStringKey
         var value: String
 
         var body: some View {
