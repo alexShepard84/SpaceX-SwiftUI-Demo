@@ -10,47 +10,75 @@ import SwiftUI
 
 struct RocketDetailView: View {
     @StateObject var viewModel: RocketDetailViewModel
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 ImageSlider(imageUrls: viewModel.rocket.images)
 
-                Text(viewModel.rocket.description)
-                // Technical Data Overview
-
-                Text("Overview")
-                    .font(.title)
-
-                VStack {
-                    DataRow(title: "Height", value: viewModel.formattedHeight)
-                    DataRow(title: "Width", value: viewModel.formattedDiameter)
-                    DataRow(title: "Mass", value: viewModel.formattedMass)
-                    ForEach(viewModel.formattedPayloadWeights) { weight in
-                        DataRow(
-                            title: "Payload to \(weight.id.uppercased())",
-                            value: weight.value
-                        )
+                Group {
+                    if horizontalSizeClass == .compact {
+                        descriptionAndDataVStack
+                    } else {
+                        descriptionAndDataHStack
                     }
                 }
 
-                Text("Launches")
-                    .font(.title)
-                Text("Coming Soon")
+                launchesSection
             }
         }
         .safeAreaPadding()
         .navigationTitle(viewModel.rocket.name)
-
-        // TODO: Launches Info
-        // TODO: Launches List
-        //        Text(viewModel.rocket.name)
     }
 }
 
-// Views
+// MARK: - Views
 private extension RocketDetailView {
+    var descriptionAndDataVStack: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            Text(viewModel.rocket.description)
+            technicalData
+        }
+    }
+
+    var descriptionAndDataHStack: some View {
+        HStack(alignment: .top, spacing: 20) {
+            Text(viewModel.rocket.description)
+            technicalData
+        }
+    }
+
+    var technicalData: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Overview")
+                .font(.title)
+
+            DataRow(title: "Height", value: viewModel.formattedHeight)
+            DataRow(title: "Width", value: viewModel.formattedDiameter)
+            DataRow(title: "Mass", value: viewModel.formattedMass)
+            ForEach(viewModel.formattedPayloadWeights) { weight in
+                DataRow(
+                    title: "Payload to \(weight.id.uppercased())",
+                    value: weight.value
+                )
+            }
+        }
+    }
+
+    var launchesSection: some View {
+        // TODO: Launches Info
+        // TODO: Launches List
+        Group {
+            Text("Launches")
+                .font(.title)
+            Text("Coming Soon")
+        }
+    }
+
     struct ImageSlider: View {
+        @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
         var imageUrls: [URL]
 
         var body: some View {
@@ -70,10 +98,15 @@ private extension RocketDetailView {
                                 EmptyView()
                             }
                         }
-                        .aspectRatio(16 / 9, contentMode: .fill)
-                        .frame(width: UIScreen.main.bounds.width - 50)
+                        .scaledToFill()
+                        .frame(width: UIScreen.main.bounds.width - 60, height: 300)
                         .clipped()
                         .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .scrollTransition(.animated, axis: .horizontal) { content, phase in
+                            content
+                                .opacity(phase.isIdentity ? 1.0 : 0.5)
+                                .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
+                        }
                     }
                 }
                 .scrollTargetLayout()
