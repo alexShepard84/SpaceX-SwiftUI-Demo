@@ -18,7 +18,7 @@ struct RocketDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: LayoutConstants.standardSpacing) {
                 Text(viewModel.rocket.name.uppercased())
-                    .font(.spaceXLargeTitle)
+                    .font(.spaceXTitle)
 
                 ImageSlider(imageUrls: viewModel.rocket.images)
 
