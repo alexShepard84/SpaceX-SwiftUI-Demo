@@ -8,13 +8,18 @@
 import SpaceXDomain
 import SwiftUI
 
+/// `RocketDetailView` presents detailed information about a specific rocket.
+/// It dynamically adjusts its layout based on the device's horizontal size class.
 struct RocketDetailView: View {
     @StateObject var viewModel: RocketDetailViewModel
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: LayoutConstants.standardSpacing) {
+                Text(viewModel.rocket.name.uppercased())
+                    .font(.spaceXLargeTitle)
+
                 ImageSlider(imageUrls: viewModel.rocket.images)
 
                 Group {
@@ -29,31 +34,35 @@ struct RocketDetailView: View {
             }
         }
         .safeAreaPadding()
-        .navigationTitle(viewModel.rocket.name)
     }
 }
 
-// MARK: - Views
+// MARK: - Subviews
 private extension RocketDetailView {
+    /// Vertical stack layout for the rocket's description and technical data.
     var descriptionAndDataVStack: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: LayoutConstants.standardSpacing) {
             Text(viewModel.rocket.description)
                 .font(.spaceXBody)
+                .lineSpacing(LayoutConstants.textLineSpacing)
             technicalData
         }
     }
 
+    /// Horizontal stack layout for the rocket's description and technical data.
     var descriptionAndDataHStack: some View {
-        HStack(alignment: .top, spacing: 20) {
+        HStack(alignment: .top, spacing: LayoutConstants.standardSpacing) {
             Text(viewModel.rocket.description)
                 .font(.spaceXBody)
+                .lineSpacing(LayoutConstants.textLineSpacing)
             technicalData
         }
     }
 
+    /// View for displaying technical data of the rocket.
     var technicalData: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Overview")
+        VStack(alignment: .leading, spacing: LayoutConstants.sectionSpacing) {
+            Text("Overview".uppercased())
                 .font(.spaceXTitle2)
 
             DataRow(title: "Height", value: viewModel.formattedHeight)
@@ -68,16 +77,18 @@ private extension RocketDetailView {
         }
     }
 
+    /// Placeholder view for future launches information.
     var launchesSection: some View {
         // TODO: Launches Info
         // TODO: Launches List
-        Group {
-            Text("Launches")
+        VStack(alignment: .leading, spacing: LayoutConstants.sectionSpacing) {
+            Text("Launches".uppercased())
                 .font(.spaceXTitle2)
             Text("Coming Soon")
         }
     }
 
+    /// `ImageSlider` displays a horizontal scrollable view of rocket images.
     struct ImageSlider: View {
         @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
@@ -101,9 +112,11 @@ private extension RocketDetailView {
                             }
                         }
                         .scaledToFill()
-                        .frame(width: UIScreen.main.bounds.width - 60, height: 300)
+                        .frame(
+                            width: UIScreen.main.bounds.width - LayoutConstants.imageSliderPadding,
+                            height: LayoutConstants.imageSliderHeight)
                         .clipped()
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .clipShape(RoundedRectangle(cornerRadius: LayoutConstants.cornerRadius))
                         .scrollTransition(.animated, axis: .horizontal) { content, phase in
                             content
                                 .opacity(phase.isIdentity ? 1.0 : 0.5)
@@ -117,6 +130,7 @@ private extension RocketDetailView {
         }
     }
 
+    /// `DataRow` presents a title and value in a horizontal layout.
     struct DataRow: View {
         var title: LocalizedStringKey
         var value: String
@@ -130,6 +144,25 @@ private extension RocketDetailView {
                     .font(.spaceXSubheadline)
             }
         }
+    }
+}
+
+// MARK: - Layout
+private extension RocketDetailView {
+    enum LayoutConstants {
+        // General Layout
+        static let standardSpacing: CGFloat = 20
+        static let sectionSpacing: CGFloat = 15
+        static let cornerRadius: CGFloat = 10
+        static let textLineSpacing: CGFloat = 8
+
+        // Image Slider
+        static let imageSliderPadding: CGFloat = 60
+        static let imageSliderHeight: CGFloat = 300
+        static let imageSliderHorizontalPadding: CGFloat = 60
+
+        // DataRow
+        static let dataRowSpacing: CGFloat = 15
     }
 }
 

@@ -9,7 +9,7 @@ import Combine
 import Foundation
 import SpaceXDomain
 
-// swiftlint:disable force_unwrapping
+// swiftlint:disable all
 class MockRocketsRepository: RocketsRepository {
     func fetchRockets() -> AnyPublisher<[SpaceXDomain.Rocket], Error> {
         let mockRockets = [
