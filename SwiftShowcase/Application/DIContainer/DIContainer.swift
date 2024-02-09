@@ -11,7 +11,7 @@ import SpaceXDomain
 import SpaceXGraphQL
 import SpaceXRestAPI
 
-class DIContainer {
+class DIContainer: ObservableObject {
     // MARK: NetworkService
     lazy var networkService: NetworkServiceProtocol = NetworkService()
 
@@ -32,4 +32,10 @@ class DIContainer {
     // MARK: GraphQL Dependencies
     lazy var rocketsGQLRepository: RocketsRepository = RocketsGQLRepository(networkService: gqlNetworkService)
     lazy var fetchRocketsGQLUseCase: FetchRocketsUseCase = DefaultFetchRocketsUseCase(repository: rocketsGQLRepository)
+
+    // MARK: - SceneFactories
+    @MainActor
+    lazy var rocketsSceneFactory = RocketsSceneFactory(dependencies: self)
 }
+
+extension DIContainer: RocketsSceneFactoryDependencies {}

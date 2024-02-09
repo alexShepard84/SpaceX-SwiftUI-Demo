@@ -8,7 +8,9 @@
 import Foundation
 
 struct RocketDTO: Codable {
-    let height, diameter, mass: Dimension
+    let id: String
+    let height, diameter: Dimension
+    let mass: Mass
     let firstStage: FirstStage
     let secondStage: SecondStage
     let engines: Engines
@@ -24,7 +26,6 @@ struct RocketDTO: Codable {
     let country, company: String
     let wikipedia: URL
     let description: String
-    let id: String
 
     enum CodingKeys: String, CodingKey {
         case height, diameter, mass
@@ -94,6 +95,10 @@ struct Thrust: Codable {
     let kN, lbf: Int
 }
 
+struct Mass: Codable {
+    let kg, lb: Double?
+}
+
 struct Engines: Codable {
     let isp: ISP
     let thrustSeaLevel, thrustVacuum: Thrust
@@ -132,5 +137,5 @@ struct LandingLegs: Codable {
 
 struct PayloadWeight: Codable {
     let id, name: String
-    let kg, lb: Int
+    let kg, lb: Double
 }
