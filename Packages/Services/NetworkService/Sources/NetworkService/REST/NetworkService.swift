@@ -119,6 +119,16 @@ private extension NetworkService {
             urlRequest.addValue(header.value, forHTTPHeaderField: header.key)
         }
 
+        if let body = route.body {
+            do {
+                let jsonData = try JSONEncoder().encode(body)
+                urlRequest.httpBody = jsonData
+            } catch {
+                os_log("Encoding failed", type: .error, error.localizedDescription)
+                return nil
+            }
+        }
+
         return urlRequest
     }
 }

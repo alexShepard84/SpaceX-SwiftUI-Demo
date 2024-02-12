@@ -12,10 +12,15 @@ public protocol Routable {
     var path: String { get }
     var httpMethod: String { get }
     var headers: [String: String] { get }
+    var body: Encodable? { get }
 }
 
 public extension Routable {
     var absoluteUrl: URL? {
         baseUrl?.appendingPathComponent(path)
+    }
+
+    var body: Encodable? {
+        nil
     }
 }
