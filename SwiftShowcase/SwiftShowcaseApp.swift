@@ -14,9 +14,7 @@ struct SwiftShowcaseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // TODO: Setup Navigation
-            diContainer
-                .rocketsSceneFactory.makeRocketsListView()
+            ContentView()
                 .environmentObject(diContainer.rocketsSceneFactory)
         }
     }

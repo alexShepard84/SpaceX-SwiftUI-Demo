@@ -29,11 +29,9 @@ final class RocketsListViewModel: ObservableObject {
 
     // MARK: Dependencies
     private let fetchRocketsUseCase: FetchRocketsUseCase
-    private let sceneFactory: RocketsSceneFactoryProtocol
 
-    init(fetchRocketsUseCase: FetchRocketsUseCase, sceneFactory: RocketsSceneFactoryProtocol) {
+    init(fetchRocketsUseCase: FetchRocketsUseCase) {
         self.fetchRocketsUseCase = fetchRocketsUseCase
-        self.sceneFactory = sceneFactory
 
         setupSubscriber()
     }
@@ -63,13 +61,6 @@ private extension RocketsListViewModel {
                 }
             )
             .store(in: &cancellables)
-    }
-}
-
-// MARK: - Routing
-extension RocketsListViewModel {
-    func makeRocketDetailView(_ rocket: Rocket) -> RocketDetailView {
-        sceneFactory.makeRocketDetailView(with: rocket)
     }
 }
 

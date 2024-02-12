@@ -30,15 +30,8 @@ final class RocketsSceneFactory: ObservableObject {
 // MARK: - Factory
 extension RocketsSceneFactory: RocketsSceneFactoryProtocol {
     func makeRocketsListView() -> RocketsContainerView {
-        let restViewModel = RocketsListViewModel(
-            fetchRocketsUseCase: dependencies.fetchRocketsUseCase,
-            sceneFactory: self
-        )
-
-        let gqlViewModel = RocketsListViewModel(
-            fetchRocketsUseCase: dependencies.fetchRocketsGQLUseCase,
-            sceneFactory: self
-        )
+        let restViewModel = RocketsListViewModel(fetchRocketsUseCase: dependencies.fetchRocketsUseCase)
+        let gqlViewModel = RocketsListViewModel(fetchRocketsUseCase: dependencies.fetchRocketsGQLUseCase)
 
         return RocketsContainerView(
             restViewModel: restViewModel,
