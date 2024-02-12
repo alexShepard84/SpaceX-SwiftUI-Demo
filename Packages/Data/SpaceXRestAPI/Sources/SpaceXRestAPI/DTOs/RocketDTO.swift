@@ -41,101 +41,102 @@ struct RocketDTO: Codable {
         case firstFlight = "first_flight"
         case country, company, wikipedia, description, id
     }
-}
 
-struct Dimension: Codable {
-    let meters: Double?
-    let feet: Double?
-}
-
-struct FirstStage: Codable {
-    let thrustSeaLevel, thrustVacuum: Thrust
-    let reusable: Bool
-    let engines, fuelAmountTons: Double
-    let burnTimeSec: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case thrustSeaLevel = "thrust_sea_level"
-        case thrustVacuum = "thrust_vacuum"
-        case reusable, engines
-        case fuelAmountTons = "fuel_amount_tons"
-        case burnTimeSec = "burn_time_sec"
+    struct Dimension: Codable {
+        let meters: Double?
+        let feet: Double?
     }
-}
 
-struct SecondStage: Codable {
-    let thrust: Thrust
-    let payloads: Payloads
-    let reusable: Bool
-    let engines, fuelAmountTons: Double
-    let burnTimeSec: Int?
+    struct FirstStage: Codable {
+        let thrustSeaLevel, thrustVacuum: Thrust
+        let reusable: Bool
+        let engines, fuelAmountTons: Double
+        let burnTimeSec: Int?
 
-    enum CodingKeys: String, CodingKey {
-        case thrust, payloads, reusable, engines
-        case fuelAmountTons = "fuel_amount_tons"
-        case burnTimeSec = "burn_time_sec"
+        enum CodingKeys: String, CodingKey {
+            case thrustSeaLevel = "thrust_sea_level"
+            case thrustVacuum = "thrust_vacuum"
+            case reusable, engines
+            case fuelAmountTons = "fuel_amount_tons"
+            case burnTimeSec = "burn_time_sec"
+        }
     }
-}
 
-struct Payloads: Codable {
-    let compositeFairing: CompositeFairing
-    let option1: String
+    struct SecondStage: Codable {
+        let thrust: Thrust
+        let payloads: Payloads
+        let reusable: Bool
+        let engines, fuelAmountTons: Double
+        let burnTimeSec: Int?
 
-    enum CodingKeys: String, CodingKey {
-        case compositeFairing = "composite_fairing"
-        case option1 = "option_1"
+        enum CodingKeys: String, CodingKey {
+            case thrust, payloads, reusable, engines
+            case fuelAmountTons = "fuel_amount_tons"
+            case burnTimeSec = "burn_time_sec"
+        }
     }
-}
 
-struct CompositeFairing: Codable {
-    let height, diameter: Dimension
-}
+    struct Payloads: Codable {
+        let compositeFairing: CompositeFairing
+        let option1: String
 
-struct Thrust: Codable {
-    let kN, lbf: Int
-}
-
-struct Mass: Codable {
-    let kg, lb: Double?
-}
-
-struct Engines: Codable {
-    let isp: ISP
-    let thrustSeaLevel, thrustVacuum: Thrust
-    let number: Int
-    let type, version: String
-    let layout: String? // Optional, falls es null sein kann
-    let engineLossMax: Int?
-    let propellant1, propellant2: String
-    let thrustToWeight: Double
-
-    enum CodingKeys: String, CodingKey {
-        case isp
-        case thrustSeaLevel = "thrust_sea_level"
-        case thrustVacuum = "thrust_vacuum"
-        case number, type, version, layout
-        case engineLossMax = "engine_loss_max"
-        case propellant1 = "propellant_1"
-        case propellant2 = "propellant_2"
-        case thrustToWeight = "thrust_to_weight"
+        enum CodingKeys: String, CodingKey {
+            case compositeFairing = "composite_fairing"
+            case option1 = "option_1"
+        }
     }
-}
 
-struct ISP: Codable {
-    let seaLevel, vacuum: Int
-
-    enum CodingKeys: String, CodingKey {
-        case seaLevel = "sea_level"
-        case vacuum
+    struct CompositeFairing: Codable {
+        let height, diameter: Dimension
     }
-}
 
-struct LandingLegs: Codable {
-    let number: Int
-    let material: String?
-}
+    struct Thrust: Codable {
+        let kN, lbf: Int
+    }
 
-struct PayloadWeight: Codable {
-    let id, name: String
-    let kg, lb: Double
+    struct Mass: Codable {
+        let kg, lb: Double?
+    }
+
+    struct Engines: Codable {
+        let isp: ISP
+        let thrustSeaLevel, thrustVacuum: Thrust
+        let number: Int
+        let type, version: String
+        let layout: String? // Optional, falls es null sein kann
+        let engineLossMax: Int?
+        let propellant1, propellant2: String
+        let thrustToWeight: Double
+
+        enum CodingKeys: String, CodingKey {
+            case isp
+            case thrustSeaLevel = "thrust_sea_level"
+            case thrustVacuum = "thrust_vacuum"
+            case number, type, version, layout
+            case engineLossMax = "engine_loss_max"
+            case propellant1 = "propellant_1"
+            case propellant2 = "propellant_2"
+            case thrustToWeight = "thrust_to_weight"
+        }
+    }
+
+    struct ISP: Codable {
+        let seaLevel, vacuum: Int
+
+        enum CodingKeys: String, CodingKey {
+            case seaLevel = "sea_level"
+            case vacuum
+        }
+    }
+
+    struct LandingLegs: Codable {
+        let number: Int
+        let material: String?
+    }
+
+    struct PayloadWeight: Codable {
+        let id, name: String
+        let kg, lb: Double
+    }
+
 }
