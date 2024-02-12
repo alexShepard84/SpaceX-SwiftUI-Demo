@@ -9,11 +9,9 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello World")
-    }
-}
+    @EnvironmentObject var rocketsSceneFactory: RocketsSceneFactory
 
-#Preview {
-    ContentView()
+    var body: some View {
+        rocketsSceneFactory.makeRocketsListView()
+    }
 }

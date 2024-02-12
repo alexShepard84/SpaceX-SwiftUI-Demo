@@ -9,6 +9,8 @@ import SpaceXDomain
 import SwiftUI
 
 struct RocketsListView: View {
+    @EnvironmentObject var rocketsSceneFactory: RocketsSceneFactory
+
     @StateObject var viewModel: RocketsListViewModel
     @State private var navPath = NavigationPath()
     @State private var selectedRocket: Rocket?
@@ -18,7 +20,7 @@ struct RocketsListView: View {
             .navigationTitle("Rockets")
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(item: $selectedRocket) { rocket in
-                viewModel.makeRocketDetailView(rocket)
+                rocketsSceneFactory.makeRocketDetailView(with: rocket)
                     .toolbarRole(.editor)
             }
         .task {
@@ -145,10 +147,7 @@ private extension RocketsListView {
 #Preview {
     let diContainer = PreviewDIContainer()
     let sceneFactory = RocketsSceneFactory(dependencies: diContainer)
-    let viewModel = RocketsListViewModel(
-        fetchRocketsUseCase: diContainer.fetchRocketsUseCase,
-        sceneFactory: sceneFactory
-    )
+    let viewModel = RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase)
 
     return RocketsListView(viewModel: viewModel)
 }

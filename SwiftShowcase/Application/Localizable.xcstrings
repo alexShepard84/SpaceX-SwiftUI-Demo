@@ -43,9 +43,6 @@
         }
       }
     },
-    "Hello World" : {
-
-    },
     "Launches" : {
       "extractionState" : "stale",
       "localizations" : {
