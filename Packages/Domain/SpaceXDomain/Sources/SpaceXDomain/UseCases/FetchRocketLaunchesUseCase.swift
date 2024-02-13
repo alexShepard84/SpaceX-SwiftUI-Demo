@@ -31,7 +31,8 @@ public final class DefaultFetchRocketLaunchesUseCase: FetchRocketLaunchesUseCase
     // TODO: Add page and limit
     public func execute(rocketId: String) async throws -> Paginated<Launch> {
         do {
-            let launches = try await repository.fetchLaunches(for: rocketId, page: 0, limit: 10)
+            let request = QueryRequest(filter: ["rocketId": rocketId])
+            let launches = try await repository.fetchLaunches(with: request)
             return launches
         } catch {
             throw FetchRocketLaunchesUseCaseError.forward(error)
