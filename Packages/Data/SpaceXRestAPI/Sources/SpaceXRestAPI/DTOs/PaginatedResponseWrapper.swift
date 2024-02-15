@@ -10,7 +10,6 @@ import Foundation
 struct PaginatedResponseWrapper<T: Decodable>: Decodable {
     let docs: [T]
     let totalDocs: Int
-    let offset: Int
     let limit: Int
     let totalPages: Int
     let page: Int

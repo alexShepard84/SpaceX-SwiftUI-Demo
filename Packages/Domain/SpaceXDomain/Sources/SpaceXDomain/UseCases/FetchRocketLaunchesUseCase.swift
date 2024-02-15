@@ -33,6 +33,7 @@ public final class DefaultFetchRocketLaunchesUseCase: FetchRocketLaunchesUseCase
         do {
             let request = QueryRequest(filter: ["rocketId": rocketId])
             let launches = try await repository.fetchLaunches(with: request)
+
             return launches
         } catch {
             throw FetchRocketLaunchesUseCaseError.forward(error)

@@ -10,8 +10,9 @@ import SpaceXDomain
 
 extension LaunchDTO {
     func toDomain() -> Launch {
-        let dateFormatter = ISO8601DateFormatter()
-        let date = dateFormatter.date(from: dateLocal) ?? Date()
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        let date = formatter.date(from: dateUtc)
 
         return Launch(
             id: id,

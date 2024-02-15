@@ -12,9 +12,9 @@ public struct Launch: Identifiable, Equatable {
     public let id: String
     public let details: String
     public let rocketId: String?
-    public let date: Date
+    public let date: Date?
 
-    public init(id: String, details: String, rocketId: String?, date: Date) {
+    public init(id: String, details: String, rocketId: String?, date: Date?) {
         self.id = id
         self.details = details
         self.rocketId = rocketId

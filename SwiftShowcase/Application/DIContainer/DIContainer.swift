@@ -25,9 +25,14 @@ class DIContainer: ObservableObject {
             .networkService
     }()
 
-    // MARK: Default Dependencies
+    // MARK: - Repositories
     lazy var rocketsRepository: RocketsRepository = DefaultRocketsRepository(networkService: networkService)
+    lazy var launchesRepository: LaunchesRepository = DefaultLaunchesRepository(networkService: networkService)
+
+    // MARK: - UseCases
     lazy var fetchRocketsUseCase: FetchRocketsUseCase = DefaultFetchRocketsUseCase(repository: rocketsRepository)
+    lazy var fetchRocketLaunchesUseCase: FetchRocketLaunchesUseCase = DefaultFetchRocketLaunchesUseCase(repository: launchesRepository)
+    lazy var fetchLastLaunchUseCase: FetchLastLaunchUseCase = DefaultFetchLastLaunchUseCase(repository: launchesRepository)
 
     // MARK: GraphQL Dependencies
     lazy var rocketsGQLRepository: RocketsRepository = RocketsGQLRepository(networkService: gqlNetworkService)

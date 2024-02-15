@@ -4,10 +4,10 @@ import NetworkService
 enum SpaceXRestAPIRouter: Routable {    
     case rockets
     case rocket(id: String)
-    case launchesQuery(QueryFilter?, QueryOptions?)
+    case launchesQuery(QueryFilter?, PaginationOptionsDTO?)
 
     var baseUrl: URL? {
-        URL(string: "https://api.spacexdata.com/v4")
+        URL(string: "https://api.spacexdata.com")
     }
 
     var path: String {
@@ -18,6 +18,15 @@ enum SpaceXRestAPIRouter: Routable {
             return "rocket/\(id)"
         case .launchesQuery:
             return "launches/query"
+        }
+    }
+
+    var apiVersion: String {
+        switch self {
+        case .launchesQuery:
+            return "v5"
+        default:
+            return "v4"
         }
     }
 
@@ -37,7 +46,10 @@ enum SpaceXRestAPIRouter: Routable {
     var body: Encodable? {
         switch self {
         case .launchesQuery(let queryFilter, let queryOptions):
-            return QueryBody(query: queryFilter, options: queryOptions)
+            return RequestBody(
+                query: queryFilter ?? [:],
+                options: queryOptions
+            )
         default:
             return nil
         }
@@ -47,19 +59,15 @@ enum SpaceXRestAPIRouter: Routable {
 
 // MARK: - Query Helper
 /// Encapsulates the body of a query request.
-struct QueryBody: Encodable {
-    let query: QueryFilter?
-    let options: QueryOptions?
+struct RequestBody: Encodable {
+    let query: QueryFilter
+    let options: PaginationOptionsDTO?
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
 
-        let queryData = try JSONSerialization.data(withJSONObject: query ?? [])
-        try container.encode(queryData, forKey: .query)
-
-        if let options = options {
-            try container.encode(options, forKey: .options)
-        }
+        try container.encode(query, forKey: .query)
+        try container.encodeIfPresent(options, forKey: .options)
     }
 
     enum CodingKeys: String, CodingKey {
@@ -67,7 +75,7 @@ struct QueryBody: Encodable {
     }
 }
 
-struct QueryOptions: Encodable {
+struct PaginationOptionsDTO: Encodable {
     let page: Int
     let limit: Int
     let sort: [String: String]?

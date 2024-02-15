@@ -122,7 +122,6 @@ private extension RocketsListView {
             }
             .aspectRatio(16 / 9, contentMode: .fit)
             .scaledToFill()
-            .clipped()
             .overlay {
                 // Gradient overlay for whole image looks much better than a text background gradient
                 LinearGradient(

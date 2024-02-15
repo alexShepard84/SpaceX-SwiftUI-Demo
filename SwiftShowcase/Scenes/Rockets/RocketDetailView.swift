@@ -17,10 +17,10 @@ struct RocketDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: LayoutConstants.standardSpacing) {
-                Text(viewModel.rocket.name.uppercased())
+                Text(viewModel.output.rocket.name.uppercased())
                     .font(.spaceXTitle)
 
-                ImageSlider(imageUrls: viewModel.rocket.images)
+                ImageSlider(imageUrls: viewModel.output.rocket.images)
 
                 Group {
                     if horizontalSizeClass == .compact {
@@ -33,6 +33,9 @@ struct RocketDetailView: View {
                 launchesSection
             }
         }
+        .task {
+            viewModel.loadLaunches()
+        }
         .safeAreaPadding()
     }
 }
@@ -42,7 +45,7 @@ private extension RocketDetailView {
     /// Vertical stack layout for the rocket's description and technical data.
     var descriptionAndDataVStack: some View {
         VStack(alignment: .leading, spacing: LayoutConstants.standardSpacing) {
-            Text(viewModel.rocket.description)
+            Text(viewModel.output.rocket.description)
                 .font(.spaceXBody)
                 .lineSpacing(LayoutConstants.textLineSpacing)
             technicalData
@@ -52,7 +55,7 @@ private extension RocketDetailView {
     /// Horizontal stack layout for the rocket's description and technical data.
     var descriptionAndDataHStack: some View {
         HStack(alignment: .top, spacing: LayoutConstants.standardSpacing) {
-            Text(viewModel.rocket.description)
+            Text(viewModel.output.rocket.description)
                 .font(.spaceXBody)
                 .lineSpacing(LayoutConstants.textLineSpacing)
             technicalData
@@ -65,10 +68,10 @@ private extension RocketDetailView {
             Text("Overview".uppercased())
                 .font(.spaceXTitle2)
 
-            DataRow(title: "Height", value: viewModel.formattedHeight)
-            DataRow(title: "Width", value: viewModel.formattedDiameter)
-            DataRow(title: "Mass", value: viewModel.formattedMass)
-            ForEach(viewModel.formattedPayloadWeights) { weight in
+            DataRow(title: "Height", value: viewModel.output.formattedHeight)
+            DataRow(title: "Width", value: viewModel.output.formattedDiameter)
+            DataRow(title: "Mass", value: viewModel.output.formattedMass)
+            ForEach(viewModel.output.formattedPayloadWeights) { weight in
                 DataRow(
                     title: "Payload to \(weight.id.uppercased())",
                     value: weight.value
@@ -78,13 +81,34 @@ private extension RocketDetailView {
     }
 
     /// Placeholder view for future launches information.
+    @ViewBuilder
     var launchesSection: some View {
-        // TODO: Launches Info
-        // TODO: Launches List
         VStack(alignment: .leading, spacing: LayoutConstants.sectionSpacing) {
-            Text("Launches".uppercased())
+            if let totalLaunches = viewModel.output.totalLaunches {
+                LaunchesCounterView(totalLaunches: totalLaunches)
+            }
+
+            Text("Latest Launch".uppercased())
                 .font(.spaceXTitle2)
-            Text("Coming Soon")
+
+            Image(.launch)
+                .resizable()
+                .aspectRatio(16 / 9, contentMode: .fill)
+                .overlay {
+                    LinearGradient(
+                        gradient: Gradient(colors: [.clear, .black.opacity(0.3), .black.opacity(0.7)]),
+                        startPoint: .center,
+                        endPoint: .bottom
+                    )
+                }
+                .overlay(alignment: .bottomLeading) {
+                    Text(viewModel.output.formattedLaunchDate)
+                        .font(.spaceXTitle)
+                        .padding(8)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .clipShape(RoundedRectangle(cornerRadius: LayoutConstants.cornerRadius))
         }
     }
 
@@ -145,6 +169,28 @@ private extension RocketDetailView {
             }
         }
     }
+
+    struct LaunchesCounterView: View {
+        let totalLaunches: Int
+        @State private var launchesCounter = 0
+
+        var body: some View {
+                VStack(alignment: .center) {
+                    Color.clear
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .animatingOverlay(for: launchesCounter)
+                        .font(.spaceXLargeTitle)
+                    Text("Total Launches")
+                        .font(.spaceXTitle3)
+                }
+                .frame(height: 80)
+                .onBecomingVisible {
+                    withAnimation(.easeInOut(duration: 2)) {
+                        launchesCounter = totalLaunches
+                    }
+                }
+        }
+    }
 }
 
 // MARK: - Layout
@@ -167,5 +213,10 @@ private extension RocketDetailView {
 }
 
 #Preview {
-    RocketDetailView(viewModel: RocketDetailViewModel(rocket: Rocket.mock))
+    let diContainer = PreviewDIContainer()
+    let viewModel = RocketDetailViewModel(rocket: Rocket.mock, fetchLastLaunchUseCase: diContainer.fetchLastLaunchUseCase)
+
+    return RocketDetailView(
+        viewModel: viewModel
+    )
 }
