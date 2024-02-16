@@ -3,9 +3,6 @@
 ## Overview
 SwiftShowcase is an iOS application that demonstrates advanced development techniques in Swift and SwiftUI, focusing on both RESTful and GraphQL API integrations. The project adheres to Clean Architecture principles to ensure maintainability, scalability, and separation of concerns.
 
-## Author
-Alex Schäfer (a.schaefer@app-concept.de)
-
 ## Contributions
 Feedback, suggestions, and contributions are welcome. Please use GitHub issues and pull requests.
 
@@ -137,3 +134,21 @@ If you encounter any issues with the Apollo setup, ensure that:
 
 For more detailed information about Apollo GraphQL and its CLI, refer to the [Apollo GraphQL documentation](https://www.apollographql.com/docs/).
 
+## Acknowledgments
+
+This project uses several third-party libraries and APIs:
+
+### SpaceX API
+Data for this application is sourced from the [SpaceX API](https://github.com/r-spacex/SpaceX-API), an open-source project providing comprehensive SpaceX data.
+
+### Third-Party Libraries
+- **SwiftLint**: A tool for enforcing Swift style and conventions. More information can be found at [SwiftLint](https://github.com/realm/SwiftLint).
+- **OHHTTPStubs**: A library for testing HTTP requests and responses, available at [OHHTTPStubs](https://github.com/AliSoftware/OHHTTPStubs).
+- **ApolloCombine**: A library for integrating GraphQL with Swift's Combine framework, available at [ApolloCombine](https://github.com/joel-perry/ApolloCombine.git).
+
+
+## Author
+
+**Alex Schäfer**
+
+- GitHub: [alexShepard84](https://github.com/alexShepard84)
