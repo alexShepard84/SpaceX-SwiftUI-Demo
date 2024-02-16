@@ -5,6 +5,7 @@
 //  Created by Alex Schäfer on 26.01.24.
 //
 
+import SceneKit
 import SpaceXDomain
 import SwiftUI
 
@@ -28,6 +29,20 @@ struct RocketDetailView: View {
                     } else {
                         descriptionAndDataHStack
                     }
+                }
+
+                if let model = viewModel.output.rocket3DModel {
+                    SceneView(
+                        scene: {
+                            let scene = SCNScene(named: model)
+                            scene?.background.contents = UIColor(named: "Background")
+                            let model = scene?.rootNode.childNode(withName: model, recursively: true)
+                            model?.eulerAngles = SCNVector3(0, -CGFloat.pi / 2, 0)
+                            return scene
+                        }(),
+                        options: [.autoenablesDefaultLighting, .allowsCameraControl]
+                    )
+                    .frame(height: 350)
                 }
 
                 launchesSection

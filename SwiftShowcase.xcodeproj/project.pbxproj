@@ -47,6 +47,11 @@
 		22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6472B5FC82400C9389C /* DIContainer.swift */; };
 		22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */; };
 		22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */; };
+		22DADC462B7F680200305B75 /* Starship.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 22DADC432B7F680100305B75 /* Starship.usdz */; };
+		22DADC472B7F680200305B75 /* FalconHeavy.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 22DADC442B7F680100305B75 /* FalconHeavy.usdz */; };
+		22DADC482B7F680200305B75 /* Falcon9.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 22DADC452B7F680200305B75 /* Falcon9.usdz */; };
+		22DADC4A2B7F682F00305B75 /* Rocket3DModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DADC492B7F682F00305B75 /* Rocket3DModel.swift */; };
+		22DADC4C2B7F6EF600305B75 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DADC4B2B7F6EF600305B75 /* Colors.xcassets */; };
 		22E3D4482B626A7A00E88DC7 /* SpaceXGraphQL in Frameworks */ = {isa = PBXBuildFile; productRef = 22E3D4472B626A7A00E88DC7 /* SpaceXGraphQL */; };
 		22E6FD3A2B6279EE00A7937C /* RocketsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E6FD392B6279EE00A7937C /* RocketsContainerView.swift */; };
 		22FF29272B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */; };
@@ -115,6 +120,11 @@
 		22C2C6472B5FC82400C9389C /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDIContainer.swift; sourceTree = "<group>"; };
 		22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRocketsRepository.swift; sourceTree = "<group>"; };
+		22DADC432B7F680100305B75 /* Starship.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Starship.usdz; sourceTree = "<group>"; };
+		22DADC442B7F680100305B75 /* FalconHeavy.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = FalconHeavy.usdz; sourceTree = "<group>"; };
+		22DADC452B7F680200305B75 /* Falcon9.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Falcon9.usdz; sourceTree = "<group>"; };
+		22DADC492B7F682F00305B75 /* Rocket3DModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket3DModel.swift; sourceTree = "<group>"; };
+		22DADC4B2B7F6EF600305B75 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		22E6FD392B6279EE00A7937C /* RocketsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsContainerView.swift; sourceTree = "<group>"; };
 		22FF29262B611BE800BE7DF1 /* FetchRocketsUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRocketsUseCaseMock.swift; sourceTree = "<group>"; };
 		22FF29282B611C6D00BE7DF1 /* RocketsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModelTests.swift; sourceTree = "<group>"; };
@@ -304,7 +314,6 @@
 				22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */,
 				22AEB8A62B5A8850008D85F7 /* ContentView.swift */,
 				22AEB8A82B5A8850008D85F7 /* Item.swift */,
-				22AEB8AA2B5A8851008D85F7 /* Assets.xcassets */,
 				22AEB8AC2B5A8851008D85F7 /* Preview Content */,
 			);
 			path = SwiftShowcase;
@@ -371,6 +380,7 @@
 		22C2C6462B5FC81600C9389C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				22DADC412B7F67CE00305B75 /* Assets */,
 				22644B4D2B7E200A00B8A3D0 /* Environment */,
 				22448E452B74F3E800F143EA /* Design */,
 				2294C8CA2B74CA400031EF9C /* Helper */,
@@ -395,6 +405,27 @@
 				22644B4B2B7BAEC000B8A3D0 /* MockLaunchesRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		22DADC412B7F67CE00305B75 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				22DADC422B7F67D600305B75 /* 3DModels */,
+				22AEB8AA2B5A8851008D85F7 /* Assets.xcassets */,
+				22DADC4B2B7F6EF600305B75 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		22DADC422B7F67D600305B75 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				22DADC452B7F680200305B75 /* Falcon9.usdz */,
+				22DADC442B7F680100305B75 /* FalconHeavy.usdz */,
+				22DADC432B7F680100305B75 /* Starship.usdz */,
+				22DADC492B7F682F00305B75 /* Rocket3DModel.swift */,
+			);
+			path = 3DModels;
 			sourceTree = "<group>";
 		};
 		22FF29232B611BC800BE7DF1 /* Scenes */ = {
@@ -544,9 +575,13 @@
 				22448E562B74F42B00F143EA /* SIL Open Font License.txt in Resources */,
 				22448E542B74F42B00F143EA /* D-DIN.otf in Resources */,
 				22448E512B74F42B00F143EA /* D-DINExp-Italic.otf in Resources */,
+				22DADC482B7F680200305B75 /* Falcon9.usdz in Resources */,
 				22448E592B74F42B00F143EA /* D-DINCondensed-Bold.otf in Resources */,
+				22DADC472B7F680200305B75 /* FalconHeavy.usdz in Resources */,
 				22448E572B74F42B00F143EA /* D-DIN-Italic.otf in Resources */,
 				22448E522B74F42B00F143EA /* D-DINExp.otf in Resources */,
+				22DADC462B7F680200305B75 /* Starship.usdz in Resources */,
+				22DADC4C2B7F6EF600305B75 /* Colors.xcassets in Resources */,
 				2294C8CE2B74D1290031EF9C /* Localizable.xcstrings in Resources */,
 				22448E552B74F42B00F143EA /* D-DINExp-Bold.otf in Resources */,
 			);
@@ -582,6 +617,7 @@
 				22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */,
 				22644B552B7E4A2500B8A3D0 /* AnimatableNumberModifier.swift in Sources */,
 				22644B5B2B7F4DFE00B8A3D0 /* CustomAsyncImageView.swift in Sources */,
+				22DADC4A2B7F682F00305B75 /* Rocket3DModel.swift in Sources */,
 				22B0DBC22B63EA570082982B /* RocketsSceneFactory.swift in Sources */,
 				22E6FD3A2B6279EE00A7937C /* RocketsContainerView.swift in Sources */,
 				22B0DBC02B63E9F40082982B /* RocketDetailViewModel.swift in Sources */,

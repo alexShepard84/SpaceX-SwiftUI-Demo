@@ -111,6 +111,10 @@ extension RocketDetailViewModel {
             formatter.timeStyle = .none
             return formatter.string(from: date)
         }
+
+        var rocket3DModel: String? {
+            Rocket3DModel.model(for: rocket.id)
+        }
     }
 }
 
