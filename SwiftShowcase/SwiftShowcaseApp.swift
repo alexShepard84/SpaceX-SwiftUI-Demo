@@ -10,29 +10,15 @@ import SwiftUI
 
 @main
 struct SwiftShowcaseApp: App {
-    var diContainer = DIContainer()
-
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @StateObject private var diContainer = DIContainer()
 
     var body: some Scene {
         WindowGroup {
-            // TODO: Setup Navigation
-            RocketsContainerView(
-                restViewModel: RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsUseCase),
-                gqlViewModel: RocketsListViewModel(fetchRocketsUseCase: diContainer.fetchRocketsGQLUseCase)
-            )
+            GeometryReader { proxy in
+                ContentView()
+                    .environment(\.windowSize, proxy.size)
+                    .environmentObject(diContainer.rocketsSceneFactory)
+            }
         }
-        .modelContainer(sharedModelContainer)
     }
 }

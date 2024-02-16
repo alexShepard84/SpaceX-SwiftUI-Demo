@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223DAD1D2B6A85400060EE58 /* RocketMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223DAD1C2B6A85400060EE58 /* RocketMock.swift */; };
+		22448E512B74F42B00F143EA /* D-DINExp-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E482B74F42A00F143EA /* D-DINExp-Italic.otf */; };
+		22448E522B74F42B00F143EA /* D-DINExp.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E492B74F42A00F143EA /* D-DINExp.otf */; };
+		22448E532B74F42B00F143EA /* D-DIN-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4A2B74F42A00F143EA /* D-DIN-Bold.otf */; };
+		22448E542B74F42B00F143EA /* D-DIN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4B2B74F42A00F143EA /* D-DIN.otf */; };
+		22448E552B74F42B00F143EA /* D-DINExp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4C2B74F42A00F143EA /* D-DINExp-Bold.otf */; };
+		22448E562B74F42B00F143EA /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4D2B74F42A00F143EA /* SIL Open Font License.txt */; };
+		22448E572B74F42B00F143EA /* D-DIN-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4E2B74F42B00F143EA /* D-DIN-Italic.otf */; };
+		22448E582B74F42B00F143EA /* D-DINCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E4F2B74F42B00F143EA /* D-DINCondensed.otf */; };
+		22448E592B74F42B00F143EA /* D-DINCondensed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 22448E502B74F42B00F143EA /* D-DINCondensed-Bold.otf */; };
+		22448E5C2B74F65C00F143EA /* DDinFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22448E5B2B74F65C00F143EA /* DDinFont.swift */; };
+		22448E5E2B74F6DA00F143EA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22448E5D2B74F6DA00F143EA /* Font.swift */; };
+		22644B4C2B7BAEC000B8A3D0 /* MockLaunchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644B4B2B7BAEC000B8A3D0 /* MockLaunchesRepository.swift */; };
+		22644B4F2B7E202400B8A3D0 /* WindowSizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644B4E2B7E202400B8A3D0 /* WindowSizeKey.swift */; };
+		22644B532B7E20AD00B8A3D0 /* BecomingVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644B522B7E20AD00B8A3D0 /* BecomingVisible.swift */; };
+		22644B552B7E4A2500B8A3D0 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644B542B7E4A2500B8A3D0 /* AnimatableNumberModifier.swift */; };
+		22644B572B7F4C6500B8A3D0 /* TextOverlayModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644B562B7F4C6500B8A3D0 /* TextOverlayModifier.swift */; };
+		22644B5B2B7F4DFE00B8A3D0 /* CustomAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22644B5A2B7F4DFE00B8A3D0 /* CustomAsyncImageView.swift */; };
+		2294C8CC2B74CA4B0031EF9C /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294C8CB2B74CA4B0031EF9C /* Formatter.swift */; };
+		2294C8CE2B74D1290031EF9C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2294C8CD2B74D1290031EF9C /* Localizable.xcstrings */; };
 		22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */; };
 		22AEB8A72B5A8850008D85F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8A62B5A8850008D85F7 /* ContentView.swift */; };
 		22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8A82B5A8850008D85F7 /* Item.swift */; };
@@ -15,6 +35,10 @@
 		22AEB8B82B5A8851008D85F7 /* SwiftShowcaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8B72B5A8851008D85F7 /* SwiftShowcaseTests.swift */; };
 		22AEB8C22B5A8851008D85F7 /* SwiftShowcaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */; };
 		22AEB8C42B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */; };
+		22B0DBBB2B6281210082982B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22B0DBBA2B6281210082982B /* SDWebImageSwiftUI */; };
+		22B0DBBE2B63E9E30082982B /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBBD2B63E9E30082982B /* RocketDetailView.swift */; };
+		22B0DBC02B63E9F40082982B /* RocketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBBF2B63E9F40082982B /* RocketDetailViewModel.swift */; };
+		22B0DBC22B63EA570082982B /* RocketsSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBC12B63EA570082982B /* RocketsSceneFactory.swift */; };
 		22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C6382B5FB88100C9389C /* CoreServices */; };
 		22C2C63B2B5FB88500C9389C /* NetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63A2B5FB88500C9389C /* NetworkService */; };
 		22C2C63D2B5FB88800C9389C /* SpaceXDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 22C2C63C2B5FB88800C9389C /* SpaceXDomain */; };
@@ -50,8 +74,29 @@
 /* Begin PBXFileReference section */
 		2207781D2B5D1F75006411E8 /* CoreServices */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreServices; sourceTree = "<group>"; };
 		220778202B5D21BB006411E8 /* NetworkService */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkService; sourceTree = "<group>"; };
+		223DAD1C2B6A85400060EE58 /* RocketMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketMock.swift; sourceTree = "<group>"; };
+		22448E482B74F42A00F143EA /* D-DINExp-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Italic.otf"; sourceTree = "<group>"; };
+		22448E492B74F42A00F143EA /* D-DINExp.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp.otf"; sourceTree = "<group>"; };
+		22448E4A2B74F42A00F143EA /* D-DIN-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Bold.otf"; sourceTree = "<group>"; };
+		22448E4B2B74F42A00F143EA /* D-DIN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN.otf"; sourceTree = "<group>"; };
+		22448E4C2B74F42A00F143EA /* D-DINExp-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Bold.otf"; sourceTree = "<group>"; };
+		22448E4D2B74F42A00F143EA /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		22448E4E2B74F42B00F143EA /* D-DIN-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Italic.otf"; sourceTree = "<group>"; };
+		22448E4F2B74F42B00F143EA /* D-DINCondensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINCondensed.otf"; sourceTree = "<group>"; };
+		22448E502B74F42B00F143EA /* D-DINCondensed-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINCondensed-Bold.otf"; sourceTree = "<group>"; };
+		22448E5A2B74F47300F143EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		22448E5B2B74F65C00F143EA /* DDinFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDinFont.swift; sourceTree = "<group>"; };
+		22448E5D2B74F6DA00F143EA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		22644B4B2B7BAEC000B8A3D0 /* MockLaunchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLaunchesRepository.swift; sourceTree = "<group>"; };
+		22644B4E2B7E202400B8A3D0 /* WindowSizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSizeKey.swift; sourceTree = "<group>"; };
+		22644B522B7E20AD00B8A3D0 /* BecomingVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BecomingVisible.swift; sourceTree = "<group>"; };
+		22644B542B7E4A2500B8A3D0 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
+		22644B562B7F4C6500B8A3D0 /* TextOverlayModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOverlayModifier.swift; sourceTree = "<group>"; };
+		22644B5A2B7F4DFE00B8A3D0 /* CustomAsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImageView.swift; sourceTree = "<group>"; };
 		227AE7F42B5FA6C10072A268 /* SpaceXRestAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXRestAPI; sourceTree = "<group>"; };
 		227AE7F52B5FA6F20072A268 /* SpaceXDomain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXDomain; sourceTree = "<group>"; };
+		2294C8CB2B74CA4B0031EF9C /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		2294C8CD2B74D1290031EF9C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseApp.swift; sourceTree = "<group>"; };
 		22AEB8A62B5A8850008D85F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +108,9 @@
 		22AEB8BD2B5A8851008D85F7 /* SwiftShowcaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftShowcaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITests.swift; sourceTree = "<group>"; };
 		22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftShowcaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		22B0DBBD2B63E9E30082982B /* RocketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailView.swift; sourceTree = "<group>"; };
+		22B0DBBF2B63E9F40082982B /* RocketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewModel.swift; sourceTree = "<group>"; };
+		22B0DBC12B63EA570082982B /* RocketsSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsSceneFactory.swift; sourceTree = "<group>"; };
 		22C2C6422B5FBEF500C9389C /* RocketsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListView.swift; sourceTree = "<group>"; };
 		22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
 		22C2C6472B5FC82400C9389C /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -79,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B0DBBB2B6281210082982B /* SDWebImageSwiftUI in Frameworks */,
 				22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */,
 				22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */,
 				22E3D4482B626A7A00E88DC7 /* SpaceXGraphQL in Frameworks */,
@@ -140,6 +189,92 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		223DAD1B2B6A85310060EE58 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				223DAD1C2B6A85400060EE58 /* RocketMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		22448E452B74F3E800F143EA /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				22644B582B7F4D8B00B8A3D0 /* UIComponents */,
+				22448E462B74F40600F143EA /* Fonts */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		22448E462B74F40600F143EA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				22448E472B74F41B00F143EA /* D-DIN */,
+				22448E5D2B74F6DA00F143EA /* Font.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		22448E472B74F41B00F143EA /* D-DIN */ = {
+			isa = PBXGroup;
+			children = (
+				22448E4A2B74F42A00F143EA /* D-DIN-Bold.otf */,
+				22448E4E2B74F42B00F143EA /* D-DIN-Italic.otf */,
+				22448E4B2B74F42A00F143EA /* D-DIN.otf */,
+				22448E502B74F42B00F143EA /* D-DINCondensed-Bold.otf */,
+				22448E4F2B74F42B00F143EA /* D-DINCondensed.otf */,
+				22448E4C2B74F42A00F143EA /* D-DINExp-Bold.otf */,
+				22448E482B74F42A00F143EA /* D-DINExp-Italic.otf */,
+				22448E492B74F42A00F143EA /* D-DINExp.otf */,
+				22448E4D2B74F42A00F143EA /* SIL Open Font License.txt */,
+				22448E5B2B74F65C00F143EA /* DDinFont.swift */,
+			);
+			path = "D-DIN";
+			sourceTree = "<group>";
+		};
+		22644B4D2B7E200A00B8A3D0 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				22644B4E2B7E202400B8A3D0 /* WindowSizeKey.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		22644B502B7E208600B8A3D0 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				22644B522B7E20AD00B8A3D0 /* BecomingVisible.swift */,
+				22644B542B7E4A2500B8A3D0 /* AnimatableNumberModifier.swift */,
+				22644B562B7F4C6500B8A3D0 /* TextOverlayModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		22644B582B7F4D8B00B8A3D0 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				22644B592B7F4DF300B8A3D0 /* Views */,
+				22644B502B7E208600B8A3D0 /* Modifier */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		22644B592B7F4DF300B8A3D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22644B5A2B7F4DFE00B8A3D0 /* CustomAsyncImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2294C8CA2B74CA400031EF9C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2294C8CB2B74CA4B0031EF9C /* Formatter.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		22AEB8982B5A8850008D85F7 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +300,7 @@
 		22AEB8A32B5A8850008D85F7 /* SwiftShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				22448E5A2B74F47300F143EA /* Info.plist */,
 				22C2C6462B5FC81600C9389C /* Application */,
 				22C2C6402B5FBECE00C9389C /* Scenes */,
 				22AEB8A42B5A8850008D85F7 /* SwiftShowcaseApp.swift */,
@@ -179,6 +315,9 @@
 		22AEB8AC2B5A8851008D85F7 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				223DAD1B2B6A85310060EE58 /* Mocks */,
+				22C2C64D2B60FAF500C9389C /* Repositories */,
+				22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */,
 				22AEB8AD2B5A8851008D85F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -224,6 +363,9 @@
 				22C2C6422B5FBEF500C9389C /* RocketsListView.swift */,
 				22C2C6442B5FBF0700C9389C /* RocketsListViewModel.swift */,
 				22E6FD392B6279EE00A7937C /* RocketsContainerView.swift */,
+				22B0DBBD2B63E9E30082982B /* RocketDetailView.swift */,
+				22B0DBBF2B63E9F40082982B /* RocketDetailViewModel.swift */,
+				22B0DBC12B63EA570082982B /* RocketsSceneFactory.swift */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -231,25 +373,19 @@
 		22C2C6462B5FC81600C9389C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				22644B4D2B7E200A00B8A3D0 /* Environment */,
+				22448E452B74F3E800F143EA /* Design */,
+				2294C8CA2B74CA400031EF9C /* Helper */,
 				22C2C64C2B60FAE200C9389C /* DIContainer */,
-				22C2C64B2B60FA6A00C9389C /* PreviewSupport */,
+				2294C8CD2B74D1290031EF9C /* Localizable.xcstrings */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		22C2C64B2B60FA6A00C9389C /* PreviewSupport */ = {
-			isa = PBXGroup;
-			children = (
-				22C2C64D2B60FAF500C9389C /* Repositories */,
-			);
-			path = PreviewSupport;
 			sourceTree = "<group>";
 		};
 		22C2C64C2B60FAE200C9389C /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
 				22C2C6472B5FC82400C9389C /* DIContainer.swift */,
-				22C2C6492B60FA3A00C9389C /* PreviewDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -258,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				22C2C64E2B60FB3D00C9389C /* MockRocketsRepository.swift */,
+				22644B4B2B7BAEC000B8A3D0 /* MockLaunchesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -309,6 +446,7 @@
 				22C2C63C2B5FB88800C9389C /* SpaceXDomain */,
 				22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */,
 				22E3D4472B626A7A00E88DC7 /* SpaceXGraphQL */,
+				22B0DBBA2B6281210082982B /* SDWebImageSwiftUI */,
 			);
 			productName = SwiftShowcase;
 			productReference = 22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */;
@@ -380,10 +518,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 22AEB8982B5A8850008D85F7;
 			packageReferences = (
 				220778162B5D1A8F006411E8 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				22B0DBB92B6281210082982B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 22AEB8A22B5A8850008D85F7 /* Products */;
 			projectDirPath = "";
@@ -402,7 +542,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				22AEB8AE2B5A8851008D85F7 /* Preview Assets.xcassets in Resources */,
+				22448E532B74F42B00F143EA /* D-DIN-Bold.otf in Resources */,
+				22448E582B74F42B00F143EA /* D-DINCondensed.otf in Resources */,
 				22AEB8AB2B5A8851008D85F7 /* Assets.xcassets in Resources */,
+				22448E562B74F42B00F143EA /* SIL Open Font License.txt in Resources */,
+				22448E542B74F42B00F143EA /* D-DIN.otf in Resources */,
+				22448E512B74F42B00F143EA /* D-DINExp-Italic.otf in Resources */,
+				22448E592B74F42B00F143EA /* D-DINCondensed-Bold.otf in Resources */,
+				22448E572B74F42B00F143EA /* D-DIN-Italic.otf in Resources */,
+				22448E522B74F42B00F143EA /* D-DINExp.otf in Resources */,
+				2294C8CE2B74D1290031EF9C /* Localizable.xcstrings in Resources */,
+				22448E552B74F42B00F143EA /* D-DINExp-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,11 +579,24 @@
 			files = (
 				22AEB8A72B5A8850008D85F7 /* ContentView.swift in Sources */,
 				22C2C64A2B60FA3A00C9389C /* PreviewDIContainer.swift in Sources */,
+				223DAD1D2B6A85400060EE58 /* RocketMock.swift in Sources */,
 				22C2C6452B5FBF0700C9389C /* RocketsListViewModel.swift in Sources */,
 				22C2C64F2B60FB3D00C9389C /* MockRocketsRepository.swift in Sources */,
+				22644B4C2B7BAEC000B8A3D0 /* MockLaunchesRepository.swift in Sources */,
 				22AEB8A92B5A8850008D85F7 /* Item.swift in Sources */,
+				22644B552B7E4A2500B8A3D0 /* AnimatableNumberModifier.swift in Sources */,
+				22644B5B2B7F4DFE00B8A3D0 /* CustomAsyncImageView.swift in Sources */,
+				22B0DBC22B63EA570082982B /* RocketsSceneFactory.swift in Sources */,
 				22E6FD3A2B6279EE00A7937C /* RocketsContainerView.swift in Sources */,
+				22B0DBC02B63E9F40082982B /* RocketDetailViewModel.swift in Sources */,
+				22448E5C2B74F65C00F143EA /* DDinFont.swift in Sources */,
 				22C2C6432B5FBEF500C9389C /* RocketsListView.swift in Sources */,
+				22644B4F2B7E202400B8A3D0 /* WindowSizeKey.swift in Sources */,
+				22644B572B7F4C6500B8A3D0 /* TextOverlayModifier.swift in Sources */,
+				2294C8CC2B74CA4B0031EF9C /* Formatter.swift in Sources */,
+				22448E5E2B74F6DA00F143EA /* Font.swift in Sources */,
+				22B0DBBE2B63E9E30082982B /* RocketDetailView.swift in Sources */,
+				22644B532B7E20AD00B8A3D0 /* BecomingVisible.swift in Sources */,
 				22C2C6482B5FC82400C9389C /* DIContainer.swift in Sources */,
 				22AEB8A52B5A8850008D85F7 /* SwiftShowcaseApp.swift in Sources */,
 			);
@@ -483,6 +646,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -546,6 +710,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -609,6 +774,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftShowcase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -639,6 +805,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftShowcase/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -783,6 +950,14 @@
 				minimumVersion = 0.54.0;
 			};
 		};
+		22B0DBB92B6281210082982B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -790,6 +965,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 220778162B5D1A8F006411E8 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
+		};
+		22B0DBBA2B6281210082982B /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22B0DBB92B6281210082982B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 		22C2C6382B5FB88100C9389C /* CoreServices */ = {
 			isa = XCSwiftPackageProductDependency;

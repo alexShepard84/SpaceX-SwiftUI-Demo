@@ -28,3 +28,5 @@ clean:
 	cd $(SPACEX_GRAPHQL_DIR) && rm -f schema.json API.swift
 
 .PHONY: install-apollo-cli download-schema generate-graphql-code setup clean
+
+

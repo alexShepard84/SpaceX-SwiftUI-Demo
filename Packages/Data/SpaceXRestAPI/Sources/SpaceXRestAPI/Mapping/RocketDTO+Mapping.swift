@@ -14,8 +14,25 @@ extension RocketDTO {
         if let firstFlight {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
-            firstFlightDate = dateFormatter.date(from: firstFlight) ?? Date()
+            firstFlightDate = dateFormatter.date(from: firstFlight)
         }
+
+        let payloadWeights = payloadWeights.map { RocketTechnicalData.PayloadWeightData(
+            id: $0.id,
+            name: $0.name,
+            kg: $0.kg,
+            lb: $0.lb
+        )}
+
+        let technicalData = RocketTechnicalData(
+            heightMeters: height.meters ?? 0,
+            heightFeet: height.feet ?? 0,
+            diameterMeters: diameter.meters ?? 0,
+            diameterFeet: diameter.feet ?? 0,
+            massKg: mass.kg ?? 0,
+            massLb: mass.lb ?? 0,
+            payloadWeights: payloadWeights
+        )
 
         return Rocket(
             id: id,
@@ -24,7 +41,8 @@ extension RocketDTO {
             description: description,
             images: flickrImages,
             firstFlight: firstFlightDate,
-            active: active
+            active: active,
+            technicalData: technicalData
         )
     }
 }

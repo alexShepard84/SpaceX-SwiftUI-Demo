@@ -1,7 +1,13 @@
-# SwiftShowcase
+# SpaceX-SwiftUI-Demo
 
 ## Overview
 SwiftShowcase is an iOS application that demonstrates advanced development techniques in Swift and SwiftUI, focusing on both RESTful and GraphQL API integrations. The project adheres to Clean Architecture principles to ensure maintainability, scalability, and separation of concerns.
+
+## Author
+Alex Schäfer (a.schaefer@app-concept.de)
+
+## Contributions
+Feedback, suggestions, and contributions are welcome. Please use GitHub issues and pull requests.
 
 ## Objective
 This application is designed to showcase:
@@ -130,10 +136,4 @@ If you encounter any issues with the Apollo setup, ensure that:
 - The correct GraphQL endpoint and configurations are set in `Packages/Data/SpaceXGraphQL/Apollo/apollo-codegen-config.json`.
 
 For more detailed information about Apollo GraphQL and its CLI, refer to the [Apollo GraphQL documentation](https://www.apollographql.com/docs/).
-
-## Contributions
-Feedback, suggestions, and contributions are welcome. Please use GitHub issues and pull requests.
-
-## Author
-Alex Schäfer (a.schaefer@app-concept.de)
 

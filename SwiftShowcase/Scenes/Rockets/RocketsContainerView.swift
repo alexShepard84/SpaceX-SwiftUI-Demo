@@ -13,23 +13,21 @@ struct RocketsContainerView: View {
     var gqlViewModel: RocketsListViewModel
 
     var body: some View {
-        VStack {
-            if selectedAPI == 0 {
-                RocketsListView(viewModel: restViewModel)
-            } else {
-                RocketsListView(viewModel: gqlViewModel)
+        NavigationStack {
+            VStack {
+                if selectedAPI == 0 {
+                    RocketsListView(viewModel: restViewModel)
+                } else {
+                    RocketsListView(viewModel: gqlViewModel)
+                }
+                Spacer()
+                Picker("API Type", selection: $selectedAPI) {
+                    Text("REST").tag(0)
+                    Text("GraphQL").tag(1)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
             }
-            Spacer()
-            Picker("API Type", selection: $selectedAPI) {
-                Text("REST").tag(0)
-                Text("GraphQL").tag(1)
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
         }
     }
 }
-
-//#Preview {
-//    RocketsContainerView()
-//}
