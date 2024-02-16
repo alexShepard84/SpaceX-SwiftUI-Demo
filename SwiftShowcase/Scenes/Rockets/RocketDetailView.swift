@@ -94,20 +94,7 @@ private extension RocketDetailView {
             Image(.launch)
                 .resizable()
                 .aspectRatio(16 / 9, contentMode: .fill)
-                .overlay {
-                    LinearGradient(
-                        gradient: Gradient(colors: [.clear, .black.opacity(0.3), .black.opacity(0.7)]),
-                        startPoint: .center,
-                        endPoint: .bottom
-                    )
-                }
-                .overlay(alignment: .bottomLeading) {
-                    Text(viewModel.output.formattedLaunchDate)
-                        .font(.spaceXTitle)
-                        .padding(8)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
+                .textOverlay(text: viewModel.output.formattedLaunchDate)
                 .clipShape(RoundedRectangle(cornerRadius: LayoutConstants.cornerRadius))
         }
     }
@@ -122,30 +109,18 @@ private extension RocketDetailView {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(imageUrls, id: \.self) { url in
-                        AsyncImage(url: url) { phase in
-                            switch phase {
-                            case .empty:
-                                Color.gray
-                            case .success(let image):
-                                image
-                                    .resizable()
-                            case .failure:
-                                Color.gray
-                            @unknown default:
-                                EmptyView()
+                        CustomAsyncImageView(url: url)
+                            .scaledToFill()
+                            .frame(
+                                width: UIScreen.main.bounds.width - LayoutConstants.imageSliderPadding,
+                                height: LayoutConstants.imageSliderHeight)
+                            .clipped()
+                            .clipShape(RoundedRectangle(cornerRadius: LayoutConstants.cornerRadius))
+                            .scrollTransition(.animated, axis: .horizontal) { content, phase in
+                                content
+                                    .opacity(phase.isIdentity ? 1.0 : 0.5)
+                                    .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
                             }
-                        }
-                        .scaledToFill()
-                        .frame(
-                            width: UIScreen.main.bounds.width - LayoutConstants.imageSliderPadding,
-                            height: LayoutConstants.imageSliderHeight)
-                        .clipped()
-                        .clipShape(RoundedRectangle(cornerRadius: LayoutConstants.cornerRadius))
-                        .scrollTransition(.animated, axis: .horizontal) { content, phase in
-                            content
-                                .opacity(phase.isIdentity ? 1.0 : 0.5)
-                                .scaleEffect(phase.isIdentity ? 1.0 : 0.95)
-                        }
                     }
                 }
                 .scrollTargetLayout()
@@ -175,20 +150,20 @@ private extension RocketDetailView {
         @State private var launchesCounter = 0
 
         var body: some View {
-                VStack(alignment: .center) {
-                    Color.clear
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .animatingOverlay(for: launchesCounter)
-                        .font(.spaceXLargeTitle)
-                    Text("Total Launches")
-                        .font(.spaceXTitle3)
+            VStack(alignment: .center) {
+                Color.clear
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .animatingOverlay(for: launchesCounter)
+                    .font(.spaceXLargeTitle)
+                Text("Total Launches")
+                    .font(.spaceXTitle3)
+            }
+            .frame(height: 80)
+            .onBecomingVisible {
+                withAnimation(.easeInOut(duration: 2)) {
+                    launchesCounter = totalLaunches
                 }
-                .frame(height: 80)
-                .onBecomingVisible {
-                    withAnimation(.easeInOut(duration: 2)) {
-                        launchesCounter = totalLaunches
-                    }
-                }
+            }
         }
     }
 }
