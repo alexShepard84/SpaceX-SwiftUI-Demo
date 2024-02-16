@@ -10,6 +10,14 @@ import Foundation
 
 import SpaceXDomain
 
+/// `RocketDetailViewModel` is responsible for managing the presentation logic of the `RocketDetailView`.
+///
+/// This view model demonstrates the use of Swift's async/await pattern with the `FetchLastLaunchUseCase`.
+/// It fetches and presents details about a specific rocket, including its technical specifications and the most recent launch information.
+/// The view model encapsulates data transformation logic, converting raw data into user-friendly formats.
+///
+/// The view model interacts with the `FetchLastLaunchUseCase` to asynchronously fetch the latest launch data associated with a given rocket.
+/// This approach showcases modern Swift concurrency features, providing a structured way to handle asynchronous data fetching and state management.
 @MainActor
 final class RocketDetailViewModel: ObservableObject {
     enum State: Equatable {
