@@ -9,6 +9,7 @@ import Foundation
 
 public protocol Routable {
     var baseUrl: URL? { get }
+    var apiVersion: String { get }
     var path: String { get }
     var httpMethod: String { get }
     var headers: [String: String] { get }
@@ -17,7 +18,9 @@ public protocol Routable {
 
 public extension Routable {
     var absoluteUrl: URL? {
-        baseUrl?.appendingPathComponent(path)
+        baseUrl?
+            .appending(path: apiVersion)
+            .appending(path: path)
     }
 
     var body: Encodable? {

@@ -9,6 +9,11 @@ import Combine
 import Foundation
 import SpaceXDomain
 
+/// `RocketsListViewModel` manages the presentation logic for the `RocketsListView`.
+///
+/// This view model demonstrates the use of Combine framework with the `FetchRocketsUseCase`.
+/// It handles fetching and presenting a list of rockets, managing the state of the view based on the data retrieval process.
+/// The view model uses Combine publishers to handle asynchronous data fetching and updates to the UI.
 @MainActor
 final class RocketsListViewModel: ObservableObject {
     enum State: Equatable {

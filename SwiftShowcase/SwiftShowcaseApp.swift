@@ -14,8 +14,11 @@ struct SwiftShowcaseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(diContainer.rocketsSceneFactory)
+            GeometryReader { proxy in
+                ContentView()
+                    .environment(\.windowSize, proxy.size)
+                    .environmentObject(diContainer.rocketsSceneFactory)
+            }
         }
     }
 }

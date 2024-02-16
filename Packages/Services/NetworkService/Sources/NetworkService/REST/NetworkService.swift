@@ -46,6 +46,8 @@ public extension NetworkService {
         guard let request = buildRequest(for: route) else {
             return Fail(error: NetworkServiceError.invalidURL).eraseToAnyPublisher()
         }
+        
+        os_log("Request: %@", type: .debug, request.description)
 
         return session.dataTaskPublisher(for: request)
             .subscribe(on: DispatchQueue.global(qos: .background))
@@ -85,10 +87,13 @@ public extension NetworkService {
             throw NetworkServiceError.invalidURL
         }
 
+        os_log("Request: %@", type: .debug, request.debugDescription)
+
         let (data, response) = try await session.data(for: request)
 
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {
+            os_log("Request failed: %@", type: .error, response.debugDescription)
             throw NetworkServiceError.requestFailed
         }
 
@@ -97,8 +102,7 @@ public extension NetworkService {
         do {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            os_log("Decoding failed", type: .error, error.localizedDescription)
-
+            os_log("Decoding failed %@", type: .error, (error as? DecodingError).debugDescription)
             throw NetworkServiceError.decodingFailed
         }
     }
@@ -122,9 +126,10 @@ private extension NetworkService {
         if let body = route.body {
             do {
                 let jsonData = try JSONEncoder().encode(body)
+                os_log("Encoded json body %@", type: .info, String(data: jsonData, encoding: .utf8) ?? "n/a")
                 urlRequest.httpBody = jsonData
             } catch {
-                os_log("Encoding failed", type: .error, error.localizedDescription)
+                os_log("Encoding failed %@", type: .error, error.localizedDescription)
                 return nil
             }
         }

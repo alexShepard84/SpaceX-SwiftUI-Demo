@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld" : {
+
+    },
     "All rockets are on a mission in outer space 🚀" : {
 
     },
@@ -18,6 +21,7 @@
 
     },
     "Coming Soon" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -115,6 +119,9 @@
           }
         }
       }
+    },
+    "Total Launches" : {
+
     },
     "Width" : {
       "localizations" : {

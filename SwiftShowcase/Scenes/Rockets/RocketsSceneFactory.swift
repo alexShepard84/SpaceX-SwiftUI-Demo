@@ -11,6 +11,7 @@ import SwiftUI
 protocol RocketsSceneFactoryDependencies {
     var fetchRocketsUseCase: FetchRocketsUseCase { get }
     var fetchRocketsGQLUseCase: FetchRocketsUseCase { get }
+    var fetchLastLaunchUseCase: FetchLastLaunchUseCase { get }
 }
 
 protocol RocketsSceneFactoryProtocol {
@@ -40,7 +41,10 @@ extension RocketsSceneFactory: RocketsSceneFactoryProtocol {
     }
 
     func makeRocketDetailView(with rocket: Rocket) -> RocketDetailView {
-        let viewModel = RocketDetailViewModel(rocket: rocket)
+        let viewModel = RocketDetailViewModel(
+            rocket: rocket,
+            fetchLastLaunchUseCase: dependencies.fetchLastLaunchUseCase
+        )
 
         return RocketDetailView(viewModel: viewModel)
     }

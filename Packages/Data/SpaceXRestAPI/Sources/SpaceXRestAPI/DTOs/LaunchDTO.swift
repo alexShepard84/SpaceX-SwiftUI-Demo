@@ -17,7 +17,7 @@ struct LaunchDTO: Codable {
     let datePrecision: DatePrecision
     let staticFireDateUtc: String?
     let staticFireDateUnix: TimeInterval?
-    let tdb: Bool
+    let tdb: Bool?
     let net: Bool
     let window: Int?
     let rocket: String?

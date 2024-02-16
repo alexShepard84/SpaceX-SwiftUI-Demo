@@ -107,38 +107,11 @@ private extension RocketsListView {
         var model: Rocket
 
         var body: some View {
-            AsyncImage(url: model.images.first) { phase in
-                switch phase {
-                case .empty:
-                    Color.gray
-                case .success(let image):
-                    image
-                        .resizable()
-                case .failure:
-                    Color.gray
-                @unknown default:
-                    EmptyView()
-                }
-            }
-            .aspectRatio(16 / 9, contentMode: .fit)
-            .scaledToFill()
-            .clipped()
-            .overlay {
-                // Gradient overlay for whole image looks much better than a text background gradient
-                LinearGradient(
-                    gradient: Gradient(colors: [.clear, .black.opacity(0.3), .black.opacity(0.7)]),
-                    startPoint: .center,
-                    endPoint: .bottom
-                )
-            }
-            .overlay(alignment: .bottomLeading) {
-                Text(model.name)
-                    .font(.spaceXLargeTitle)
-                    .padding(8)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+            CustomAsyncImageView(url: model.images.first)
+                .aspectRatio(16 / 9, contentMode: .fit)
+                .scaledToFill()
+                .textOverlay(text: model.name)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
         }
     }
 }

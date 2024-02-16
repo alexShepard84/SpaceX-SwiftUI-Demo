@@ -14,7 +14,7 @@ extension RocketDTO {
         if let firstFlight {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
-            firstFlightDate = dateFormatter.date(from: firstFlight) ?? Date()
+            firstFlightDate = dateFormatter.date(from: firstFlight)
         }
 
         let payloadWeights = payloadWeights.map { RocketTechnicalData.PayloadWeightData(

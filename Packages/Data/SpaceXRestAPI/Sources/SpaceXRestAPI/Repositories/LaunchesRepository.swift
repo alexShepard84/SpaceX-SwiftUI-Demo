@@ -19,11 +19,13 @@ public final class DefaultLaunchesRepository {
 }
 
 extension DefaultLaunchesRepository: LaunchesRepository {
-    public func fetchLaunches(for rocketId: String, page: Int = 0, limit: Int = 10) async throws -> Paginated<Launch> {
-        logger.info("Fetching launches for rocket ID \(rocketId)")
+    public func fetchLaunches(with request: QueryRequest?) async throws -> Paginated<Launch> {
+        let queryFilter = request?.filter
+        let queryOptions = request?.options?.asDTO
 
         do {
-            let paginatedResponse: PaginatedResponseWrapper<LaunchDTO> = try await networkService.requestAsync(SpaceXRestAPIRouter.launchesByRocket(id: rocketId, page: page, limit: limit))
+            let query = SpaceXRestAPIRouter.launchesQuery(queryFilter, queryOptions)
+            let paginatedResponse: PaginatedResponseWrapper<LaunchDTO> = try await networkService.requestAsync(query)
 
             let launches = paginatedResponse.docs.map { $0.toDomain() }
 
