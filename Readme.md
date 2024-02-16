@@ -1,5 +1,8 @@
 # SpaceX-SwiftUI-Demo
 
+![AppDemo](https://github.com/alexShepard84/SpaceX-SwiftUI-Demo/assets/63854354/f042a08b-2e71-4236-9c5c-24a10c42c1e8)
+
+
 ## Overview
 SwiftShowcase is an iOS application that demonstrates advanced development techniques in Swift and SwiftUI, focusing on both RESTful and GraphQL API integrations. The project adheres to Clean Architecture principles to ensure maintainability, scalability, and separation of concerns.
 
