@@ -35,7 +35,6 @@
 		22AEB8B82B5A8851008D85F7 /* SwiftShowcaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8B72B5A8851008D85F7 /* SwiftShowcaseTests.swift */; };
 		22AEB8C22B5A8851008D85F7 /* SwiftShowcaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C12B5A8851008D85F7 /* SwiftShowcaseUITests.swift */; };
 		22AEB8C42B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEB8C32B5A8851008D85F7 /* SwiftShowcaseUITestsLaunchTests.swift */; };
-		22B0DBBB2B6281210082982B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 22B0DBBA2B6281210082982B /* SDWebImageSwiftUI */; };
 		22B0DBBE2B63E9E30082982B /* RocketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBBD2B63E9E30082982B /* RocketDetailView.swift */; };
 		22B0DBC02B63E9F40082982B /* RocketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBBF2B63E9F40082982B /* RocketDetailViewModel.swift */; };
 		22B0DBC22B63EA570082982B /* RocketsSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0DBC12B63EA570082982B /* RocketsSceneFactory.swift */; };
@@ -127,7 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22B0DBBB2B6281210082982B /* SDWebImageSwiftUI in Frameworks */,
 				22C2C6392B5FB88100C9389C /* CoreServices in Frameworks */,
 				22C2C63F2B5FB88E00C9389C /* SpaceXRestAPI in Frameworks */,
 				22E3D4482B626A7A00E88DC7 /* SpaceXGraphQL in Frameworks */,
@@ -446,7 +444,6 @@
 				22C2C63C2B5FB88800C9389C /* SpaceXDomain */,
 				22C2C63E2B5FB88E00C9389C /* SpaceXRestAPI */,
 				22E3D4472B626A7A00E88DC7 /* SpaceXGraphQL */,
-				22B0DBBA2B6281210082982B /* SDWebImageSwiftUI */,
 			);
 			productName = SwiftShowcase;
 			productReference = 22AEB8A12B5A8850008D85F7 /* SwiftShowcase.app */;
@@ -523,7 +520,6 @@
 			mainGroup = 22AEB8982B5A8850008D85F7;
 			packageReferences = (
 				220778162B5D1A8F006411E8 /* XCRemoteSwiftPackageReference "SwiftLint" */,
-				22B0DBB92B6281210082982B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 22AEB8A22B5A8850008D85F7 /* Products */;
 			projectDirPath = "";
@@ -950,14 +946,6 @@
 				minimumVersion = 0.54.0;
 			};
 		};
-		22B0DBB92B6281210082982B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.6;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -965,11 +953,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 220778162B5D1A8F006411E8 /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
-		};
-		22B0DBBA2B6281210082982B /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 22B0DBB92B6281210082982B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
 		};
 		22C2C6382B5FB88100C9389C /* CoreServices */ = {
 			isa = XCSwiftPackageProductDependency;
