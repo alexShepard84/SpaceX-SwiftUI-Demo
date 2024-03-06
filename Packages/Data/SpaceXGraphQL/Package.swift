@@ -13,11 +13,11 @@ let package = Package(
             targets: ["SpaceXGraphQL"]),
     ],
     dependencies: [
-        .package(name: "SpaceXDomain", path: "../Domain/SpaceXDomain"),
-        .package(name: "NetworkService", path: "../Services/NetworkService"),
+        .package(name: "SpaceXDomain", path: "../../Domain/SpaceXDomain"),
+        .package(name: "NetworkService", path: "../../Services/NetworkService"),
         .package(
             url: "https://github.com/apollographql/apollo-ios.git",
-            .upToNextMajor(from: "1.5.0")
+            .upToNextMinor(from: "1.5.0")
         ),
     ],
     targets: [
