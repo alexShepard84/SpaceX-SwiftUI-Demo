@@ -38,14 +38,6 @@ A directive used by the Apollo iOS client to annotate operations or fragments th
 """
 directive @apollo_client_ios_localCacheMutation on QUERY | MUTATION | SUBSCRIPTION | FRAGMENT_DEFINITION
 
-"""
-A directive used by the Apollo iOS code generation engine to generate custom import statements in operation or fragment definition files. An import statement to import a module with the name provided in the `module` argument will be added to the generated definition file.
-"""
-directive @import(
-  """The name of the module to import."""
-  module: String!
-) repeatable on QUERY | MUTATION | SUBSCRIPTION | FRAGMENT_DEFINITION
-
 type Address {
   address: String
   city: String
